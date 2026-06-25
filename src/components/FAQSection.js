@@ -3,21 +3,28 @@ export default function FAQSection({
   faqs,
 }) {
   return (
-    <section className="bg-slate-50 py-16">
+    <section className="bg-slate-50 py-20">
       <div className="mx-auto max-w-4xl px-6">
-        <h2 className="text-3xl font-bold tracking-tight text-slate-950">
-          {title}
-        </h2>
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+            Helpful information
+          </p>
 
-        <div className="mt-8 space-y-4">
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+            {title}
+          </h2>
+        </div>
+
+        <div className="mt-10 space-y-4">
           {faqs.map((faq) => (
             <div
               key={faq.question}
-              className="rounded-2xl border border-slate-200 bg-white p-6"
+              className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-emerald-200 hover:shadow-md"
             >
-              <h3 className="text-lg font-semibold text-slate-950">
+              <h3 className="text-lg font-bold text-slate-950">
                 {faq.question}
               </h3>
+
               <p className="mt-3 leading-7 text-slate-600">{faq.answer}</p>
             </div>
           ))}

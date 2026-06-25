@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -11,18 +12,17 @@ const navigation = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-700 text-lg font-bold text-white">
-            OM
-          </div>
-          <div>
-            <p className="text-sm font-bold leading-tight text-slate-950">
-              Online Maths Exam
-            </p>
-            <p className="text-xs text-slate-500">Functional Skills Maths</p>
-          </div>
+    <header className="sticky top-0 z-50 border-b border-emerald-100 bg-white/90 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-1">
+        <Link href="/" className="group flex items-center">
+          <Image
+            src="/images/online-maths-exam-logo.png"
+            alt="Online Maths Exam"
+            width={260}
+            height={87}
+            priority
+            className="h-24 w-auto transition group-hover:-translate-y-0.5"
+          />
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm font-medium text-slate-700 lg:flex">
@@ -30,7 +30,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="transition hover:text-blue-700"
+              className="relative transition hover:text-emerald-700 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:bg-emerald-700 after:transition-all hover:after:w-full"
             >
               {item.name}
             </Link>
@@ -39,7 +39,7 @@ export default function Header() {
 
         <Link
           href="/online-functional-skills-maths-exam"
-          className="hidden rounded-full bg-blue-700 px-5 py-2 text-sm font-semibold text-white transition hover:bg-blue-800 md:inline-flex"
+          className="hidden rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800 md:inline-flex"
         >
           View Exam
         </Link>
