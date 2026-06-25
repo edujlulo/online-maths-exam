@@ -1,65 +1,83 @@
-import Image from "next/image";
+import Hero from "@/components/Hero";
+import CTASection from "@/components/CTASection";
+import FAQSection from "@/components/FAQSection";
+
+const homeFaqs = [
+  {
+    question: "What is Functional Skills Maths?",
+    answer:
+      "Functional Skills Maths is a practical maths qualification designed to help learners use maths in everyday life, work and further study.",
+  },
+  {
+    question: "Can I take the Functional Skills Maths exam online?",
+    answer:
+      "Yes, learners can take Functional Skills Maths exams online through approved providers. This website helps explain the process and links to exam booking information.",
+  },
+  {
+    question: "Is Functional Skills Maths Level 2 equivalent to GCSE?",
+    answer:
+      "Functional Skills Maths Level 2 is commonly accepted as a GCSE equivalent qualification for many jobs, courses and training programmes.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Hero
+        eyebrow="Online Maths Exam"
+        title="Online Functional Skills Maths Exams"
+        description="Learn about Functional Skills Maths Level 1 and Level 2, understand how online exams work, and find preparation options before booking your exam."
+        primaryLink="/online-functional-skills-maths-exam"
+        primaryLabel="View Online Maths Exam"
+        secondaryLink="/online-maths-course"
+        secondaryLabel="Prepare with Online Maths Course"
+      />
+
+      <section className="py-16">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="text-xl font-semibold text-slate-950">
+                Functional Skills Maths Level 2
+              </h2>
+              <p className="mt-3 text-slate-600">
+                A popular option for learners who need a GCSE equivalent maths
+                qualification for work, university, apprenticeships or career
+                progression.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="text-xl font-semibold text-slate-950">
+                Functional Skills Maths Level 1
+              </h2>
+              <p className="mt-3 text-slate-600">
+                A useful step for learners who want to build confidence before
+                progressing to Level 2.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="text-xl font-semibold text-slate-950">
+                Online Maths Course
+              </h2>
+              <p className="mt-3 text-slate-600">
+                Prepare before your exam with online maths learning designed to
+                support Functional Skills Maths topics.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      <FAQSection title="Common questions" faqs={homeFaqs} />
+
+      <CTASection
+        title="Ready to learn more about online maths exams?"
+        description="Explore the exam information and choose the level that best matches your goals."
+        link="/online-functional-skills-maths-exam"
+        label="Explore the Exam"
+      />
+    </>
   );
 }
