@@ -36,14 +36,14 @@ export default function BlogPage() {
               <h2 className="mt-3 text-xl font-semibold text-slate-950">
                 {post.title}
               </h2>
-              <p className="mt-3 text-slate-600">{post.excerpt}</p>
+              <p className="mt-3 leading-7 text-slate-600">{post.excerpt}</p>
 
               <Link
-                // href={`/blog/${post.slug}`}
-                href="/blog"
+                href={`/blog/${post.slug}`}
+                // href="/blog"
                 className="mt-5 inline-flex text-sm font-semibold text-blue-700 hover:text-blue-800"
               >
-                Read article
+                Read more
               </Link>
             </article>
           ))}

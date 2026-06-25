@@ -2,6 +2,12 @@ import Hero from "@/components/Hero";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 
+export const metadata = {
+  title: "Online Functional Skills Maths Exams",
+  description:
+    "Learn about online Functional Skills Maths exams, Level 1, Level 2, GCSE equivalence and online maths course preparation.",
+};
+
 const homeFaqs = [
   {
     question: "What is Functional Skills Maths?",
