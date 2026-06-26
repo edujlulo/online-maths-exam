@@ -175,10 +175,10 @@ export default function Footer() {
               </svg>
 
               <a
-                href="mailto:info@onlinemathsexam.com"
+                href="mailto:info@onlinemathsexam.co.uk"
                 className="break-all transition hover:text-emerald-300"
               >
-                info@onlinemathsexam.com
+                info@onlinemathsexam.co.uk
               </a>
             </p>
           </div>
