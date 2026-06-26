@@ -28,9 +28,9 @@ const faqs = [
 export default function OnlineFunctionalSkillsMathsExamPage() {
   return (
     <>
-      <section className="bg-slate-50 py-16">
+      <section className="bg-gradient-to-br from-emerald-50 via-white to-slate-50 py-16">
         <div className="mx-auto max-w-6xl px-6">
-          <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">
+          <p className="inline-flex rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-emerald-800">
             Online Exam
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
@@ -47,10 +47,15 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
 
       <section className="py-16">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-2">
-          <div>
-            <h2 className="text-3xl font-bold text-slate-950">
+          <div className="rounded-3xl border border-emerald-100 bg-white p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+              Exam topics
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold text-slate-950">
               What does the exam cover?
             </h2>
+
             <p className="mt-4 leading-7 text-slate-600">
               Functional Skills Maths focuses on practical numeracy. Learners
               may be assessed on topics such as number, measures, shape, space,
@@ -58,10 +63,15 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
             </p>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold text-slate-950">
+          <div className="rounded-3xl border border-emerald-100 bg-emerald-50/60 p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+              Choose your level
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold text-slate-950">
               Level 1 and Level 2
             </h2>
+
             <p className="mt-4 leading-7 text-slate-600">
               Level 2 is commonly used as a GCSE equivalent route, while Level 1
               can be a useful step for learners who want to build confidence

@@ -1,20 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="border-t border-emerald-900 bg-slate-950 text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
         <div>
-          <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-800 text-lg font-bold text-white shadow-lg shadow-emerald-900/30">
-              OM
-            </div>
-
-            <div>
-              <h2 className="text-lg font-bold">Online Maths Exam</h2>
-              <p className="text-xs font-medium text-emerald-300">
-                Functional Skills Maths
-              </p>
+          <Link href="/" className="inline-flex items-center">
+            <div className="rounded-2xl bg-white px-3 py-2 shadow-lg shadow-emerald-950/30">
+              <Image
+                src="/images/online-maths-exam-logo.png"
+                alt="Online Maths Exam"
+                width={260}
+                height={87}
+                className="h-18 w-auto"
+              />
             </div>
           </Link>
 

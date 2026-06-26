@@ -28,9 +28,9 @@ const faqs = [
 export default function Level1Page() {
   return (
     <>
-      <section className="bg-slate-50 py-16">
+      <section className="bg-gradient-to-br from-emerald-50 via-white to-slate-50 py-16">
         <div className="mx-auto max-w-6xl px-6">
-          <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">
+          <p className="inline-flex rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-emerald-800">
             Build confidence
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
@@ -45,14 +45,21 @@ export default function Level1Page() {
 
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-3xl font-bold text-slate-950">
-            A stepping stone towards Level 2
-          </h2>
-          <p className="mt-4 max-w-3xl leading-7 text-slate-600">
-            Level 1 can help learners strengthen core maths skills and prepare
-            for future progression. It may be suitable for candidates who are
-            not yet ready for Level 2.
-          </p>
+          <div className="rounded-3xl border border-emerald-100 bg-white p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+              Build strong foundations
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold text-slate-950">
+              A stepping stone towards Level 2
+            </h2>
+
+            <p className="mt-4 max-w-3xl leading-7 text-slate-600">
+              Level 1 can help learners strengthen core maths skills and prepare
+              for future progression. It may be suitable for candidates who are
+              not yet ready for Level 2.
+            </p>
+          </div>
         </div>
       </section>
 

@@ -128,7 +128,7 @@ export default function Home() {
         </div>
       </section>
 
-      <FAQSection title="Common questions" faqs={homeFaqs} />
+      <FAQSection title="Frequently asked questions" faqs={homeFaqs} />
 
       <CTASection
         title="Ready to book or prepare for your online maths exam?"

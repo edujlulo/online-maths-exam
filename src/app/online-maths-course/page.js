@@ -28,9 +28,9 @@ const faqs = [
 export default function OnlineMathsCoursePage() {
   return (
     <>
-      <section className="bg-slate-50 py-16">
+      <section className="bg-gradient-to-br from-emerald-50 via-white to-slate-50 py-16">
         <div className="mx-auto max-w-6xl px-6">
-          <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">
+          <p className="inline-flex rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-emerald-800">
             Exam preparation
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
@@ -45,14 +45,21 @@ export default function OnlineMathsCoursePage() {
 
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-3xl font-bold text-slate-950">
-            Prepare before you book
-          </h2>
-          <p className="mt-4 max-w-3xl leading-7 text-slate-600">
-            A structured online course can help learners revise key topics,
-            practise exam-style questions and build confidence before sitting
-            the Functional Skills Maths exam.
-          </p>
+          <div className="rounded-3xl border border-emerald-100 bg-white p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+              Study online
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold text-slate-950">
+              Prepare before you book
+            </h2>
+
+            <p className="mt-4 max-w-3xl leading-7 text-slate-600">
+              A structured online course can help learners revise key topics,
+              practise exam-style questions and build confidence before sitting
+              the Functional Skills Maths exam.
+            </p>
+          </div>
         </div>
       </section>
 
