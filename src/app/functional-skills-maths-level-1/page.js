@@ -1,10 +1,11 @@
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
+import Link from "next/link";
 
 export const metadata = {
   title: "Functional Skills Maths Level 1 | Online Exam & Course",
   description:
-    "Learn about Functional Skills Maths Level 1, who it is for, how it helps learners progress towards Level 2 and how to prepare with an online maths course.",
+    "Learn about Functional Skills Maths Level 1, online exam options, course preparation and how Level 1 can help learners progress towards the GCSE equivalent Level 2 route.",
 };
 
 const progressionSteps = [
@@ -92,6 +93,12 @@ const faqs = [
     question: "Does completing the course give me the qualification?",
     answer:
       "No. The online course is for preparation only. To gain a Functional Skills Maths qualification, you must take and pass the official Functional Skills Maths exam.",
+  },
+  {
+    question:
+      "Can Functional Skills Maths Level 1 help me prepare for Level 2?",
+    answer:
+      "Yes. Functional Skills Maths Level 1 can help learners build confidence with practical maths before progressing to Level 2, which is the common GCSE equivalent route for work, university and apprenticeship requirements.",
   },
 ];
 
@@ -243,8 +250,8 @@ export default function Level1Page() {
                     {step.level === "Entry Level"
                       ? "E"
                       : step.level === "Level 1"
-                      ? "1"
-                      : "2"}
+                        ? "1"
+                        : "2"}
                   </div>
 
                   <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
@@ -329,6 +336,15 @@ export default function Level1Page() {
                 online Level 2 exam route and then reply to the booking email,
                 clearly stating that they want the Level 1 exam.
               </p>
+
+              <a
+                href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
+              >
+                View Intech Centre Level 1 Booking Route
+              </a>
             </div>
 
             <div className="rounded-3xl border border-emerald-100 bg-white p-8 shadow-sm">
@@ -346,6 +362,14 @@ export default function Level1Page() {
                 means learners can start with easier topics and progress towards
                 Level 1 or Level 2 when ready.
               </p>
+              <div className="mt-8 text-center">
+                <Link
+                  href="/functional-skills-maths-level-2"
+                  className="inline-flex text-sm font-semibold text-emerald-800 transition hover:text-emerald-900"
+                >
+                  Learn more about Functional Skills Maths Level 2 →
+                </Link>
+              </div>
             </div>
           </div>
         </div>

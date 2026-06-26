@@ -1,5 +1,6 @@
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
+import Link from "next/link";
 
 export const metadata = {
   title: "Functional Skills Maths Level 2 | GCSE Equivalent Maths",
@@ -102,6 +103,11 @@ const faqs = [
     question: "What happens if I am not ready for Level 2?",
     answer:
       "If you are not ready for Level 2, you can build confidence with Level 1 topics or use an online Functional Skills Maths course that covers Entry Level, Level 1 and Level 2.",
+  },
+  {
+    question: "Can I take Functional Skills Maths Level 2 online from home?",
+    answer:
+      "Yes. Learners can take the Functional Skills Maths Level 2 exam online from home or another suitable private location, as long as their computer, internet connection, ID and room setup meet the online exam requirements.",
   },
 ];
 
@@ -340,6 +346,15 @@ export default function Level2Page() {
                 Skills Maths topics and want to take the official online exam.
                 Passing the exam is what gives you the qualification.
               </p>
+
+              <a
+                href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
+              >
+                View Intech Centre Level 2 Exam
+              </a>
             </div>
 
             <div className="rounded-[2rem] border border-emerald-100 bg-emerald-50/60 p-8 shadow-sm">
@@ -356,6 +371,12 @@ export default function Level2Page() {
                 online Functional Skills Maths course covering Entry Level,
                 Level 1 and Level 2 topics before booking your exam.
               </p>
+              <Link
+                href="/online-maths-course"
+                className="mt-6 inline-flex rounded-full border border-emerald-200 bg-white px-6 py-3 text-sm font-semibold text-emerald-800 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-700 hover:bg-emerald-50"
+              >
+                View Online Maths Course
+              </Link>
             </div>
           </div>
         </div>

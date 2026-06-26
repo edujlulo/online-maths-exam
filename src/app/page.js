@@ -47,9 +47,9 @@ const homeFaqs = [
       "The online Functional Skills Maths Level 2 exam lasts 1 hour 45 minutes. It includes a non-calculator section and a calculator section.",
   },
   {
-    question: "Where can I book the online maths exam?",
+    question: "Where can I book the online Functional Skills Maths exam?",
     answer:
-      "This website explains the exam route and preparation options. To book, learners should follow the current booking information from Intech Centre for the online Functional Skills Maths Level 2 exam.",
+      "This website explains the online Functional Skills Maths exam route, Level 1, Level 2 and preparation options. To book the exam, learners should follow the current booking information from Intech Centre’s official online Functional Skills Maths exam page.",
   },
 ];
 
@@ -366,6 +366,52 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-white pb-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="rounded-[2rem] border border-emerald-100 bg-emerald-50/70 p-8 shadow-sm md:p-10">
+            <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+                  Official booking route
+                </p>
+
+                <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">
+                  Ready to check the official online maths exam booking route?
+                </h2>
+
+                <p className="mt-4 leading-7 text-slate-600">
+                  This website explains the Functional Skills Maths exam route,
+                  Level 1, Level 2 and preparation options. For current exam
+                  booking information, prices and availability, visit Intech
+                  Centre’s official online Functional Skills Maths exam page.
+                </p>
+              </div>
+
+              <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-emerald-100">
+                <h3 className="text-xl font-bold text-slate-950">
+                  Book through Intech Centre
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                  Check the latest online Functional Skills Maths exam guidance,
+                  including booking details, candidate information and available
+                  exam route.
+                </p>
+
+                <a
+                  href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
+                >
+                  View Intech Centre Exam Route
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-slate-950 py-20 text-white">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-3xl text-center">
@@ -409,7 +455,7 @@ export default function Home() {
 
       <CTASection
         title="Need a GCSE equivalent maths qualification?"
-        description="Learn how the online Functional Skills Maths exam works, compare Level 1 and Level 2, and choose whether to book the exam directly or prepare with an online course first."
+        description="Explore the online Functional Skills Maths exam route, compare Level 1 and Level 2, and understand whether you should book the exam directly or prepare with an online course first."
         link="/online-functional-skills-maths-exam"
         label="Explore Online Maths Exam"
       />

@@ -30,7 +30,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-700 lg:flex">
+        <nav className="hidden items-center gap-5.5 text-sm font-medium text-slate-700 lg:flex">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -46,7 +46,7 @@ export default function Header() {
           href="/online-functional-skills-maths-exam"
           className="hidden rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800 lg:inline-flex"
         >
-          View Exam
+          View Online Exam
         </Link>
 
         <button
@@ -112,7 +112,7 @@ export default function Header() {
             onClick={() => setIsMenuOpen(false)}
             className="mt-2 rounded-full bg-emerald-700 px-5 py-3 text-center text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:bg-emerald-800"
           >
-            View Exam
+            View Online Exam
           </Link>
         </nav>
       </div>

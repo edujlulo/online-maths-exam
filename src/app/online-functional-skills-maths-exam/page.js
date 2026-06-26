@@ -115,15 +115,20 @@ const faqs = [
       "An online Functional Skills Maths exam is a computer-based maths exam that can be taken remotely from your own location. The exam is invigilated online and follows the same qualification standards as a centre-based Functional Skills Maths exam.",
   },
   {
+    question: "Can I take the Functional Skills Maths exam online from home?",
+    answer:
+      "Yes. The online Functional Skills Maths exam can be taken from home or another suitable private location if your computer, internet connection, photo ID and exam room meet the online exam requirements. Candidates should read the Candidate Guide before booking and before exam day.",
+  },
+  {
     question:
       "Is the online Functional Skills Maths Level 2 exam equivalent to GCSE?",
     answer:
       "Functional Skills Maths Level 2 is widely used as a GCSE Maths equivalent route. It is commonly accepted as equivalent to GCSE Maths Grade 4/C by many employers, colleges, universities and apprenticeship providers.",
   },
   {
-    question: "Who is the online maths exam suitable for?",
+    question: "Who is the online Functional Skills Maths exam suitable for?",
     answer:
-      "The online maths exam is suitable for adults, apprentices, university applicants, home-educated learners and people who need a recognised maths qualification for work, study or career progression.",
+      "The online Functional Skills Maths exam is suitable for adults, apprentices, university applicants, home-educated learners and people who need a recognised maths qualification for work, study or career progression.",
   },
   {
     question: "How long is the online Functional Skills Maths Level 2 exam?",
@@ -458,7 +463,7 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
         title="Ready to book your online Functional Skills Maths exam?"
         description="Visit Intech Centre to check the latest online exam price, available slots, Candidate Guide and booking instructions."
         link="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
-        label="Book Online Maths Exam"
+        label="Book Through Intech Centre"
       />
     </>
   );

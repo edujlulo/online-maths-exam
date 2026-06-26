@@ -3,9 +3,9 @@ import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata = {
-  title: "Online Functional Skills Maths Course | Level 1 & Level 2",
+  title: "Online Functional Skills Maths Course | Exam Preparation",
   description:
-    "Prepare for Functional Skills Maths Level 1 and Level 2 with an online self-learning course covering Entry Level to Level 2, diagnostic assessment, skill checks and revision scenarios.",
+    "Prepare for Functional Skills Maths Level 1 and Level 2 with an online self-learning course covering Entry Level to Level 2, diagnostic assessment, skill checks, revision scenarios and exam practice.",
 };
 
 const courseFacts = [
@@ -131,6 +131,18 @@ const faqs = [
     question: "Can I study the course from home?",
     answer:
       "Yes. The course is online and self-paced, so learners can study from home, revisit lessons, practise questions and focus on the areas where they need the most improvement.",
+  },
+  {
+    question:
+      "What is the difference between the online maths course and the exam?",
+    answer:
+      "The online maths course is for preparation. It helps learners revise topics, practise questions and build confidence before exam day. The exam is separate and must be passed to receive the Functional Skills Maths qualification.",
+  },
+  {
+    question:
+      "Does the online Functional Skills Maths course include exam practice?",
+    answer:
+      "The course includes practice activities, skill checks and revision scenarios to help learners prepare for Functional Skills Maths exam-style questions. Learners still need to book and pass the official exam to receive the qualification.",
   },
 ];
 
@@ -406,7 +418,7 @@ export default function OnlineMathsCoursePage() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
               >
-                View Intech Centre course
+                View Intech Centre Online Maths Course
               </a>
             </div>
 
@@ -442,7 +454,7 @@ export default function OnlineMathsCoursePage() {
         title="Want to prepare before your online maths exam?"
         description="Visit Intech Centre to check the latest Functional Skills Maths online course information, price and enrolment guidance."
         link="https://www.intechcentre.com/courses/private-functional-skills-in-maths/"
-        label="View Online Maths Course"
+        label="View Intech Centre Online Maths Course"
       />
     </>
   );
