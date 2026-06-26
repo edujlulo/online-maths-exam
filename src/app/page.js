@@ -2,6 +2,14 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
+import {
+  Award,
+  ShieldCheck,
+  MonitorCheck,
+  Clock,
+  FileCheck,
+  BadgeCheck,
+} from "lucide-react";
 
 export const metadata = {
   title: "Online Functional Skills Maths Exams | GCSE Equivalent Maths",
@@ -58,37 +66,37 @@ const trustFacts = [
     label: "Awarding body",
     value: "City & Guilds",
     detail: "Functional Skills Maths route",
-    icon: "✓",
+    icon: Award,
   },
   {
     label: "Qualification",
     value: "Ofqual regulated",
     detail: "Recognised UK qualification",
-    icon: "★",
+    icon: ShieldCheck,
   },
   {
     label: "Exam style",
     value: "Online exam",
     detail: "Computer-based and remotely invigilated",
-    icon: "⌘",
+    icon: MonitorCheck,
   },
   {
     label: "Duration",
     value: "1 hour 45 minutes",
     detail: "Level 2 online exam time",
-    icon: "⏱",
+    icon: Clock,
   },
   {
     label: "Results",
     value: "Usually within a week",
     detail: "May take up to 20 working days",
-    icon: "↗",
+    icon: FileCheck,
   },
   {
     label: "GCSE equivalent",
     value: "Level 2 route",
     detail: "Widely used as GCSE Grade 4/C equivalent",
-    icon: "2",
+    icon: BadgeCheck,
   },
 ];
 
@@ -143,8 +151,8 @@ export default function Home() {
                 key={fact.label}
                 className="rounded-3xl border border-slate-200 bg-slate-50/70 p-5 shadow-sm transition hover:border-emerald-200 hover:bg-emerald-50/50"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
-                  {fact.icon}
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                  <fact.icon className="h-5 w-5" aria-hidden="true" />
                 </div>
 
                 <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">

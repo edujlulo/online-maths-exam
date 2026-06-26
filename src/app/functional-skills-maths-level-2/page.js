@@ -1,6 +1,27 @@
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import Link from "next/link";
+import {
+  Award,
+  ShieldCheck,
+  MonitorCheck,
+  Clock,
+  BadgePoundSterling,
+  FileCheck,
+  BadgeCheck,
+  Percent,
+  GraduationCap,
+  Calculator,
+  CircleSlash,
+  University,
+  HeartPulse,
+  School,
+  BriefcaseBusiness,
+  HardHat,
+  TrendingUp,
+  ClipboardCheck,
+  Users,
+} from "lucide-react";
 
 export const metadata = {
   title: "Functional Skills Maths Level 2 | GCSE Equivalent Maths",
@@ -13,49 +34,73 @@ const examFacts = [
     label: "Awarding body",
     value: "City & Guilds",
     detail: "Functional Skills Maths Level 2",
-    icon: "✓",
+    icon: Award,
   },
   {
     label: "Qualification",
     value: "Ofqual regulated",
     detail: "Recognised UK qualification",
-    icon: "★",
+    icon: ShieldCheck,
   },
   {
     label: "Exam style",
     value: "Online exam",
     detail: "Computer-based and remotely invigilated",
-    icon: "⌘",
+    icon: MonitorCheck,
   },
   {
     label: "Duration",
     value: "1h 45m",
     detail: "Level 2 online exam time",
-    icon: "⏱",
+    icon: Clock,
   },
   {
     label: "Cost",
     value: "£180",
     detail: "Per exam attempt",
-    icon: "£",
+    icon: BadgePoundSterling,
   },
   {
     label: "Results",
     value: "Usually within a week",
     detail: "May take up to 20 working days",
-    icon: "↗",
+    icon: FileCheck,
   },
 ];
 
 const learnerReasons = [
-  "University applications",
-  "Nursing & healthcare courses",
-  "Teacher training",
-  "Apprenticeships",
-  "Construction courses",
-  "Career progression",
-  "Job applications",
-  "Adults returning to education",
+  {
+    title: "University applications",
+    icon: University,
+  },
+  {
+    title: "Nursing & healthcare courses",
+    icon: HeartPulse,
+  },
+  {
+    title: "Teacher training",
+    icon: School,
+  },
+  {
+    title: "Apprenticeships",
+    icon: GraduationCap,
+  },
+  {
+    title: "Construction courses",
+    icon: HardHat,
+  },
+  {
+    title: "Career progression",
+    icon: TrendingUp,
+  },
+  {
+    title: "Job applications",
+    icon: BriefcaseBusiness,
+  },
+  {
+    title: "Adults returning to education",
+    icon: Users,
+  },
 ];
 
 const faqs = [
@@ -154,8 +199,8 @@ export default function Level2Page() {
                 key={fact.label}
                 className="rounded-3xl border border-slate-200 bg-slate-50/70 p-5 shadow-sm transition hover:border-emerald-200 hover:bg-emerald-50/50"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
-                  {fact.icon}
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                  <fact.icon className="h-5 w-5" aria-hidden="true" />
                 </div>
 
                 <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
@@ -197,8 +242,8 @@ export default function Level2Page() {
 
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               <div className="rounded-2xl bg-emerald-50 p-5 ring-1 ring-emerald-100">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-700 text-sm font-bold text-white">
-                  ✓
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-700 text-white">
+                  <BadgeCheck className="h-5 w-5" aria-hidden="true" />
                 </div>
 
                 <h3 className="font-bold text-slate-950">
@@ -213,8 +258,8 @@ export default function Level2Page() {
               </div>
 
               <div className="rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
-                  %
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                  <Percent className="h-5 w-5" aria-hidden="true" />
                 </div>
 
                 <h3 className="font-bold text-slate-950">
@@ -229,8 +274,8 @@ export default function Level2Page() {
               </div>
 
               <div className="rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
-                  ⌘
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                  <MonitorCheck className="h-5 w-5" aria-hidden="true" />
                 </div>
 
                 <h3 className="font-bold text-slate-950">Online exam option</h3>
@@ -260,8 +305,8 @@ export default function Level2Page() {
 
             <div className="mt-8 grid gap-6 md:grid-cols-2">
               <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-sm font-bold text-white">
-                  25%
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white">
+                  <CircleSlash className="h-6 w-6" aria-hidden="true" />
                 </div>
 
                 <h3 className="text-xl font-bold text-slate-950">
@@ -276,8 +321,8 @@ export default function Level2Page() {
               </div>
 
               <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-700 text-sm font-bold text-white">
-                  75%
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-700 text-white">
+                  <Calculator className="h-6 w-6" aria-hidden="true" />
                 </div>
 
                 <h3 className="text-xl font-bold text-slate-950">
@@ -318,14 +363,14 @@ export default function Level2Page() {
             <div className="grid gap-4 sm:grid-cols-2">
               {learnerReasons.map((reason) => (
                 <div
-                  key={reason}
+                  key={reason.title}
                   className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg"
                 >
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
-                    ✓
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                    <reason.icon className="h-5 w-5" aria-hidden="true" />
                   </div>
 
-                  <h3 className="font-bold text-slate-950">{reason}</h3>
+                  <h3 className="font-bold text-slate-950">{reason.title}</h3>
                 </div>
               ))}
             </div>

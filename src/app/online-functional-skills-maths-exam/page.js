@@ -1,6 +1,20 @@
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
+import {
+  Award,
+  ShieldCheck,
+  MonitorCheck,
+  BadgePoundSterling,
+  Clock,
+  FileCheck,
+  BookOpenCheck,
+  IdCard,
+  Laptop,
+  Wifi,
+  DoorClosed,
+  MailCheck,
+} from "lucide-react";
 
 export const metadata = {
   title: "Online Functional Skills Maths Exam | Level 1 & Level 2",
@@ -13,37 +27,37 @@ const examFacts = [
     label: "Awarding body",
     value: "City & Guilds",
     detail: "Functional Skills Maths route",
-    icon: "✓",
+    icon: Award,
   },
   {
     label: "Qualification",
     value: "Ofqual regulated",
     detail: "Recognised UK qualification",
-    icon: "★",
+    icon: ShieldCheck,
   },
   {
     label: "Exam style",
     value: "Online exam",
     detail: "Computer-based and remotely invigilated",
-    icon: "⌘",
+    icon: MonitorCheck,
   },
   {
     label: "Cost",
     value: "£180",
     detail: "Per exam attempt",
-    icon: "£",
+    icon: BadgePoundSterling,
   },
   {
     label: "Duration",
     value: "1h 45m",
     detail: "Level 2 online exam time",
-    icon: "⏱",
+    icon: Clock,
   },
   {
     label: "Results",
     value: "Usually within a week",
     detail: "May take up to 20 working days",
-    icon: "↗",
+    icon: FileCheck,
   },
 ];
 
@@ -81,12 +95,30 @@ const processSteps = [
 ];
 
 const examDayChecklist = [
-  "Read the Candidate Guide carefully",
-  "Prepare a valid photo ID",
-  "Check your computer or laptop",
-  "Test your internet connection",
-  "Use a quiet and suitable exam room",
-  "Follow the City & Guilds / Talview email instructions",
+  {
+    text: "Read the Candidate Guide carefully",
+    icon: BookOpenCheck,
+  },
+  {
+    text: "Prepare a valid photo ID",
+    icon: IdCard,
+  },
+  {
+    text: "Check your computer or laptop",
+    icon: Laptop,
+  },
+  {
+    text: "Test your internet connection",
+    icon: Wifi,
+  },
+  {
+    text: "Use a quiet and suitable exam room",
+    icon: DoorClosed,
+  },
+  {
+    text: "Follow the City & Guilds / Talview email instructions",
+    icon: MailCheck,
+  },
 ];
 
 const levelOptions = [
@@ -220,8 +252,8 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
                 key={fact.label}
                 className="rounded-3xl border border-slate-200 bg-slate-50/70 p-5 shadow-sm transition hover:border-emerald-200 hover:bg-emerald-50/50"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
-                  {fact.icon}
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                  <fact.icon className="h-5 w-5" aria-hidden="true" />
                 </div>
 
                 <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
@@ -300,14 +332,16 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {examDayChecklist.map((item) => (
                   <div
-                    key={item}
+                    key={item.text}
                     className="flex gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-emerald-100"
                   >
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-800">
-                      ✓
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-800">
+                      <item.icon className="h-4 w-4" aria-hidden="true" />
                     </span>
 
-                    <p className="text-sm leading-6 text-slate-600">{item}</p>
+                    <p className="text-sm leading-6 text-slate-600">
+                      {item.text}
+                    </p>
                   </div>
                 ))}
               </div>

@@ -1,6 +1,31 @@
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
+import {
+  Clock,
+  Layers,
+  BadgePoundSterling,
+  BookOpenCheck,
+  FileText,
+  SearchCheck,
+  PlaySquare,
+  ListChecks,
+  Puzzle,
+  BadgeCheck,
+  GraduationCap,
+  Percent,
+  BarChart3,
+  Ruler,
+  PieChart,
+  Brain,
+  Users,
+  University,
+  BriefcaseBusiness,
+  HeartPulse,
+  Baby,
+  Target,
+  CircleCheck,
+} from "lucide-react";
 
 export const metadata = {
   title: "Online Functional Skills Maths Course | Exam Preparation",
@@ -13,25 +38,25 @@ const courseFacts = [
     label: "Access",
     value: "2 months online",
     detail: "Unlimited access during the course period",
-    icon: "⏱",
+    icon: Clock,
   },
   {
     label: "Levels",
     value: "Entry Level to Level 2",
     detail: "Start from your current maths level",
-    icon: "↑",
+    icon: Layers,
   },
   {
     label: "Price",
     value: "£75 with exam",
     detail: "Or £150 as a standalone course",
-    icon: "£",
+    icon: BadgePoundSterling,
   },
   {
     label: "Purpose",
     value: "Exam preparation",
     detail: "Prepare before sitting the official exam",
-    icon: "✓",
+    icon: BookOpenCheck,
   },
 ];
 
@@ -41,49 +66,90 @@ const courseSteps = [
     title: "Initial assessment",
     description:
       "Checks your current maths level from Pre-Entry up to Level 2 so you can start from the right place.",
+    icon: FileText,
   },
   {
     step: "02",
     title: "Diagnostic assessment",
     description:
       "Identifies skill gaps and creates a personalised learning plan linked to the relevant topic modules.",
+    icon: SearchCheck,
   },
   {
     step: "03",
     title: "Self-learning course",
     description:
       "Provides explanations, examples, demonstration videos and practice activities that you can pause, replay and revisit.",
+    icon: PlaySquare,
   },
   {
     step: "04",
     title: "Skill checks",
     description:
       "Helps confirm understanding of each topic, with modules marked as achieved when the required score is reached.",
+    icon: ListChecks,
   },
   {
     step: "05",
     title: "Revision scenarios",
     description:
       "Includes interactive scenarios and assessment-style tasks to help you apply maths to real-life problems.",
+    icon: Puzzle,
   },
 ];
 
 const practiceTopics = [
-  "Fractions, decimals and percentages",
-  "Ratios and proportion",
-  "Graphs, charts and data",
-  "Measurements and unit conversions",
-  "Probability and statistics",
-  "Real-life problem solving",
+  {
+    title: "Fractions, decimals and percentages",
+    icon: Percent,
+  },
+  {
+    title: "Ratios and proportion",
+    icon: PieChart,
+  },
+  {
+    title: "Graphs, charts and data",
+    icon: BarChart3,
+  },
+  {
+    title: "Measurements and unit conversions",
+    icon: Ruler,
+  },
+  {
+    title: "Probability and statistics",
+    icon: Brain,
+  },
+  {
+    title: "Real-life problem solving",
+    icon: Puzzle,
+  },
 ];
 
 const learnerTypes = [
-  "Adults returning to maths",
-  "University applicants",
-  "Apprentices",
-  "Healthcare and nursing applicants",
-  "Busy parents and workers",
-  "Learners preparing for Level 1 or Level 2",
+  {
+    title: "Adults returning to maths",
+    icon: Users,
+  },
+  {
+    title: "University applicants",
+    icon: University,
+  },
+  {
+    title: "Apprentices",
+    icon: GraduationCap,
+  },
+  {
+    title: "Healthcare and nursing applicants",
+    icon: HeartPulse,
+  },
+  {
+    title: "Busy parents and workers",
+    icon: BriefcaseBusiness,
+  },
+  {
+    title: "Learners preparing for Level 1 or Level 2",
+    icon: Target,
+  },
 ];
 
 const faqs = [
@@ -188,8 +254,8 @@ export default function OnlineMathsCoursePage() {
                 key={fact.label}
                 className="rounded-3xl border border-slate-200 bg-slate-50/70 p-5 shadow-sm transition hover:border-emerald-200 hover:bg-emerald-50/50"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
-                  {fact.icon}
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                  <fact.icon className="h-5 w-5" aria-hidden="true" />
                 </div>
 
                 <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
@@ -254,8 +320,8 @@ export default function OnlineMathsCoursePage() {
 
             <div className="mt-8 grid gap-6 md:grid-cols-2">
               <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-emerald-100">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
-                  ✓
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                  <BookOpenCheck className="h-6 w-6" aria-hidden="true" />
                 </div>
 
                 <h3 className="text-xl font-bold text-slate-950">
@@ -269,8 +335,8 @@ export default function OnlineMathsCoursePage() {
               </div>
 
               <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-emerald-100">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-700 text-sm font-bold text-white">
-                  ★
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-700 text-white">
+                  <BadgeCheck className="h-6 w-6" aria-hidden="true" />
                 </div>
 
                 <h3 className="text-xl font-bold text-slate-950">
@@ -308,9 +374,13 @@ export default function OnlineMathsCoursePage() {
                   key={step.title}
                   className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg"
                 >
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
-                    {step.step}
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                    <step.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
+
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-emerald-700">
+                    Step {step.step}
+                  </p>
 
                   <h3 className="text-lg font-bold text-slate-950">
                     {step.title}
@@ -343,15 +413,15 @@ export default function OnlineMathsCoursePage() {
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {practiceTopics.map((topic) => (
                 <div
-                  key={topic}
+                  key={topic.title}
                   className="flex gap-3 rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200 transition hover:bg-emerald-50 hover:ring-emerald-200"
                 >
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-800">
-                    ✓
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-800">
+                    <topic.icon className="h-4 w-4" aria-hidden="true" />
                   </span>
 
                   <p className="text-sm font-semibold leading-6 text-slate-700">
-                    {topic}
+                    {topic.title}
                   </p>
                 </div>
               ))}
@@ -383,14 +453,14 @@ export default function OnlineMathsCoursePage() {
             <div className="grid gap-4 sm:grid-cols-2">
               {learnerTypes.map((type) => (
                 <div
-                  key={type}
+                  key={type.title}
                   className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg"
                 >
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
-                    ✓
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                    <type.icon className="h-5 w-5" aria-hidden="true" />
                   </div>
 
-                  <h3 className="font-bold text-slate-950">{type}</h3>
+                  <h3 className="font-bold text-slate-950">{type.title}</h3>
                 </div>
               ))}
             </div>
@@ -401,6 +471,10 @@ export default function OnlineMathsCoursePage() {
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
                 Need preparation first?
               </p>
+
+              <div className="mt-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-700 text-white">
+                <BookOpenCheck className="h-6 w-6" aria-hidden="true" />
+              </div>
 
               <h2 className="mt-3 text-2xl font-bold text-slate-950">
                 Start with the online maths course
@@ -426,7 +500,9 @@ export default function OnlineMathsCoursePage() {
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
                 Ready for the exam?
               </p>
-
+              <div className="mt-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                <CircleCheck className="h-6 w-6" aria-hidden="true" />
+              </div>
               <h2 className="mt-3 text-2xl font-bold text-slate-950">
                 Book the online maths exam
               </h2>

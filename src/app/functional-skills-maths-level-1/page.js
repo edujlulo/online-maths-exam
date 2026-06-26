@@ -1,6 +1,17 @@
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import Link from "next/link";
+import {
+  BookOpenCheck,
+  TrendingUp,
+  Laptop,
+  BadgeCheck,
+  CircleCheck,
+  ListChecks,
+  GraduationCap,
+  Target,
+  Route,
+} from "lucide-react";
 
 export const metadata = {
   title: "Functional Skills Maths Level 1 | Online Exam & Course",
@@ -14,18 +25,21 @@ const progressionSteps = [
     title: "Start with the basics",
     description:
       "Build basic number confidence and prepare for more structured Functional Skills Maths topics.",
+    icon: BookOpenCheck,
   },
   {
     level: "Level 1",
     title: "Strengthen practical maths",
     description:
       "Develop everyday maths skills and prepare for progression towards Level 2.",
+    icon: ListChecks,
   },
   {
     level: "Level 2",
     title: "GCSE equivalent route",
     description:
       "The level most commonly requested for university, apprenticeships, work and further study.",
+    icon: GraduationCap,
   },
 ];
 
@@ -140,8 +154,8 @@ export default function Level1Page() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-lg font-bold text-emerald-800">
-                1
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                <Target className="h-6 w-6" aria-hidden="true" />
               </div>
 
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
@@ -160,8 +174,8 @@ export default function Level1Page() {
             </div>
 
             <div className="rounded-3xl border border-emerald-100 bg-emerald-50/60 p-6 shadow-sm">
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-700 text-lg font-bold text-white">
-                ↑
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-700 text-white">
+                <TrendingUp className="h-6 w-6" aria-hidden="true" />
               </div>
 
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
@@ -180,8 +194,8 @@ export default function Level1Page() {
             </div>
 
             <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-lg font-bold text-white">
-                ✓
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white">
+                <Laptop className="h-6 w-6" aria-hidden="true" />
               </div>
 
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
@@ -246,12 +260,8 @@ export default function Level1Page() {
                   key={step.level}
                   className="relative rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm"
                 >
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
-                    {step.level === "Entry Level"
-                      ? "E"
-                      : step.level === "Level 1"
-                        ? "1"
-                        : "2"}
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                    <step.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
 
                   <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
@@ -308,8 +318,8 @@ export default function Level1Page() {
                   <ul className="mt-6 space-y-4">
                     {level.points.map((point) => (
                       <li key={point} className="flex gap-3 leading-7">
-                        <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-800">
-                          ✓
+                        <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-800">
+                          <CircleCheck className="h-4 w-4" aria-hidden="true" />
                         </span>
                         <span className="text-slate-600">{point}</span>
                       </li>
@@ -325,7 +335,9 @@ export default function Level1Page() {
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
                 Online exam route
               </p>
-
+              <div className="mt-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-700 text-white">
+                <Route className="h-6 w-6" aria-hidden="true" />
+              </div>
               <h2 className="mt-3 text-2xl font-bold text-slate-950">
                 How to book Level 1 through Intech Centre
               </h2>
@@ -351,7 +363,9 @@ export default function Level1Page() {
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
                 Course support
               </p>
-
+              <div className="mt-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                <BookOpenCheck className="h-6 w-6" aria-hidden="true" />
+              </div>
               <h2 className="mt-3 text-2xl font-bold text-slate-950">
                 Prepare with Entry Level, Level 1 and Level 2 content
               </h2>
