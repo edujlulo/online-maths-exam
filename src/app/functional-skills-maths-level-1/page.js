@@ -7,6 +7,50 @@ export const metadata = {
     "Learn about Functional Skills Maths Level 1, who it is for, how it helps learners progress towards Level 2 and how to prepare with an online maths course.",
 };
 
+const progressionSteps = [
+  {
+    level: "Entry Level",
+    title: "Start with the basics",
+    description:
+      "Build basic number confidence and prepare for more structured Functional Skills Maths topics.",
+  },
+  {
+    level: "Level 1",
+    title: "Strengthen practical maths",
+    description:
+      "Develop everyday maths skills and prepare for progression towards Level 2.",
+  },
+  {
+    level: "Level 2",
+    title: "GCSE equivalent route",
+    description:
+      "The level most commonly requested for university, apprenticeships, work and further study.",
+  },
+];
+
+const levelComparison = [
+  {
+    title: "Functional Skills Maths Level 1",
+    badge: "Build confidence",
+    points: [
+      "Best for learners who are not ready for Level 2 yet",
+      "Helps strengthen practical maths foundations",
+      "Useful stepping stone before the GCSE equivalent route",
+      "Can be supported by online course preparation",
+    ],
+  },
+  {
+    title: "Functional Skills Maths Level 2",
+    badge: "GCSE equivalent route",
+    points: [
+      "Widely used as equivalent to GCSE Maths Grade 4/C",
+      "Commonly requested by employers, universities and apprenticeships",
+      "Often needed for nursing, teacher training and career progression",
+      "Can be taken online through the correct exam route",
+    ],
+  },
+];
+
 const faqs = [
   {
     question: "What is Functional Skills Maths Level 1?",
@@ -70,6 +114,18 @@ export default function Level1Page() {
             Level 2. It can help you strengthen everyday numeracy skills and
             prepare for the online Functional Skills Maths exam route.
           </p>
+
+          <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-600">
+            <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+              Practical maths foundations
+            </span>
+            <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+              Stepping stone to Level 2
+            </span>
+            <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+              Online course preparation
+            </span>
+          </div>
         </div>
       </section>
 
@@ -77,6 +133,10 @@ export default function Level1Page() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-lg font-bold text-emerald-800">
+                1
+              </div>
+
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
                 Best for
               </p>
@@ -93,6 +153,10 @@ export default function Level1Page() {
             </div>
 
             <div className="rounded-3xl border border-emerald-100 bg-emerald-50/60 p-6 shadow-sm">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-700 text-lg font-bold text-white">
+                ↑
+              </div>
+
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
                 Progression
               </p>
@@ -109,6 +173,10 @@ export default function Level1Page() {
             </div>
 
             <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-lg font-bold text-white">
+                ✓
+              </div>
+
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
                 Preparation
               </p>
@@ -150,7 +218,102 @@ export default function Level1Page() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-12 rounded-3xl border border-emerald-100 bg-emerald-50/60 p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+              Progression path
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold text-slate-950">
+              From Entry Level to Level 2
+            </h2>
+
+            <p className="mt-4 max-w-4xl leading-7 text-slate-600">
+              Intech Centre's online Functional Skills Maths course includes
+              Entry Level, Level 1 and Level 2. This helps learners start from
+              their current ability and build towards the level they need.
+            </p>
+
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {progressionSteps.map((step) => (
+                <div
+                  key={step.level}
+                  className="relative rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm"
+                >
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
+                    {step.level === "Entry Level"
+                      ? "E"
+                      : step.level === "Level 1"
+                      ? "1"
+                      : "2"}
+                  </div>
+
+                  <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+                    {step.level}
+                  </p>
+
+                  <h3 className="mt-3 text-xl font-bold text-slate-950">
+                    {step.title}
+                  </h3>
+
+                  <p className="mt-3 leading-7 text-slate-600">
+                    {step.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+                Compare levels
+              </p>
+
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+                Level 1 vs Level 2
+              </h2>
+
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                The right level depends on your current confidence and what you
+                need the qualification for. Level 1 is usually a preparation
+                route, while Level 2 is the common GCSE equivalent route.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 lg:grid-cols-2">
+              {levelComparison.map((level) => (
+                <div
+                  key={level.title}
+                  className={`rounded-[2rem] border p-8 shadow-sm ${
+                    level.title.includes("Level 2")
+                      ? "border-emerald-100 bg-emerald-50/60"
+                      : "border-slate-200 bg-white"
+                  }`}
+                >
+                  <p className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-emerald-800 shadow-sm">
+                    {level.badge}
+                  </p>
+
+                  <h3 className="mt-5 text-2xl font-bold text-slate-950">
+                    {level.title}
+                  </h3>
+
+                  <ul className="mt-6 space-y-4">
+                    {level.points.map((point) => (
+                      <li key={point} className="flex gap-3 leading-7">
+                        <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-800">
+                          ✓
+                        </span>
+                        <span className="text-slate-600">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
             <div className="rounded-3xl border border-emerald-100 bg-emerald-50/60 p-8 shadow-sm">
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
                 Online exam route

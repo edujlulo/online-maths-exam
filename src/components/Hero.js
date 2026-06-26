@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero({
   eyebrow,
@@ -63,8 +64,23 @@ export default function Hero({
           </div>
         </div>
 
-        <div className="rounded-[2rem] border border-emerald-100 bg-white/80 p-4 shadow-2xl shadow-slate-200 backdrop-blur">
-          <div className="rounded-[1.5rem] bg-gradient-to-br from-emerald-700 via-emerald-800 to-emerald-950 p-6 text-white">
+        <div className="mx-auto w-full max-w-xl rounded-[2rem] border border-emerald-100 bg-white/85 p-4 shadow-2xl shadow-slate-200 backdrop-blur lg:max-w-none">
+          <div className="relative overflow-hidden rounded-[1.5rem]">
+            <Image
+              src="/images/hero-online-maths-exam.webp"
+              alt="Adult learner taking an online Functional Skills Maths exam at home"
+              width={900}
+              height={675}
+              priority
+              className="aspect-[4/3] w-full object-cover object-center"
+            />
+
+            <div className="absolute left-4 top-4 rounded-full bg-white/90 px-4 py-2 text-xs font-semibold text-emerald-800 shadow-sm backdrop-blur">
+              Online maths exam
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-[1.5rem] bg-gradient-to-br from-emerald-700 via-emerald-800 to-emerald-950 p-6 text-white">
             <p className="text-sm font-medium text-emerald-300">
               Functional Skills Maths
             </p>
@@ -78,29 +94,46 @@ export default function Hero({
               right booking route.
             </p>
 
-            <div className="mt-6 rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
-              <p className="text-sm font-semibold text-white">
-                Most popular route
-              </p>
-              <p className="mt-1 text-sm text-emerald-50/80">
-                Functional Skills Maths Level 2 for work, university,
-                apprenticeships and career progression.
-              </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
+                <p className="text-sm font-semibold text-white">Level 2</p>
+                <p className="mt-1 text-sm leading-6 text-emerald-50/80">
+                  GCSE equivalent route for many learners.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur">
+                <p className="text-sm font-semibold text-white">Online exam</p>
+                <p className="mt-1 text-sm leading-6 text-emerald-50/80">
+                  Computer-based exam with remote invigilation.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl bg-emerald-50 p-5 ring-1 ring-emerald-100">
-              <p className="text-sm font-semibold text-emerald-800">Level 2</p>
-              <p className="mt-2 text-sm leading-6 text-slate-600">
-                GCSE equivalent route for many learners.
+          <div className="mt-4 grid gap-4 sm:grid-cols-3">
+            <div className="rounded-2xl bg-emerald-50 p-4 ring-1 ring-emerald-100">
+              <p className="text-sm font-semibold text-emerald-800">1h 45m</p>
+              <p className="mt-1 text-xs leading-5 text-slate-600">
+                Level 2 exam duration
               </p>
             </div>
 
-            <div className="rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200">
-              <p className="text-sm font-semibold text-slate-900">Level 1</p>
-              <p className="mt-2 text-sm leading-6 text-slate-600">
-                Build confidence before progressing further.
+            <div className="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
+              <p className="text-sm font-semibold text-slate-900">
+                City & Guilds
+              </p>
+              <p className="mt-1 text-xs leading-5 text-slate-600">
+                Functional Skills route
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
+              <p className="text-sm font-semibold text-slate-900">
+                Course option
+              </p>
+              <p className="mt-1 text-xs leading-5 text-slate-600">
+                Prepare online first
               </p>
             </div>
           </div>

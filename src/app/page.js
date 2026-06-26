@@ -53,6 +53,75 @@ const homeFaqs = [
   },
 ];
 
+const trustFacts = [
+  {
+    label: "Awarding body",
+    value: "City & Guilds",
+    detail: "Functional Skills Maths route",
+    icon: "✓",
+  },
+  {
+    label: "Qualification",
+    value: "Ofqual regulated",
+    detail: "Recognised UK qualification",
+    icon: "★",
+  },
+  {
+    label: "Exam style",
+    value: "Online exam",
+    detail: "Computer-based and remotely invigilated",
+    icon: "⌘",
+  },
+  {
+    label: "Duration",
+    value: "1 hour 45 minutes",
+    detail: "Level 2 online exam time",
+    icon: "⏱",
+  },
+  {
+    label: "Results",
+    value: "Usually within a week",
+    detail: "May take up to 20 working days",
+    icon: "↗",
+  },
+  {
+    label: "GCSE equivalent",
+    value: "Level 2 route",
+    detail: "Widely used as GCSE Grade 4/C equivalent",
+    icon: "2",
+  },
+];
+
+const learnerTypes = [
+  "University applicants",
+  "Apprenticeships",
+  "Nursing & healthcare",
+  "Teacher training",
+  "Career progression",
+  "Adults returning to education",
+];
+
+const howItWorks = [
+  {
+    step: "01",
+    title: "Choose your route",
+    description:
+      "Book the online Functional Skills Maths exam directly, or prepare with the online maths course first if you need more confidence.",
+  },
+  {
+    step: "02",
+    title: "Prepare for the online exam",
+    description:
+      "Check the Candidate Guide, system requirements, ID, room setup and the topics you need to revise before exam day.",
+  },
+  {
+    step: "03",
+    title: "Sit your exam online",
+    description:
+      "Complete the computer-based exam with remote invigilation and wait for your result after marking.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -65,6 +134,35 @@ export default function Home() {
         secondaryLink="/online-maths-course"
         secondaryLabel="Prepare with Online Maths Course"
       />
+
+      <section className="border-y border-emerald-100 bg-white py-8">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+            {trustFacts.map((fact) => (
+              <div
+                key={fact.label}
+                className="rounded-3xl border border-slate-200 bg-slate-50/70 p-5 shadow-sm transition hover:border-emerald-200 hover:bg-emerald-50/50"
+              >
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
+                  {fact.icon}
+                </div>
+
+                <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
+                  {fact.label}
+                </p>
+
+                <h2 className="mt-2 text-base font-bold text-slate-950">
+                  {fact.value}
+                </h2>
+
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {fact.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="bg-white py-20">
         <div className="mx-auto max-w-6xl px-6">
@@ -152,6 +250,157 @@ export default function Home() {
                 View course options →
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+                Who it helps
+              </p>
+
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+                Who needs Functional Skills Maths Level 2?
+              </h2>
+
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                Many learners choose Functional Skills Maths Level 2 because
+                they need a recognised GCSE equivalent maths qualification for
+                study, work, apprenticeships or career progression.
+              </p>
+
+              <p className="mt-4 leading-7 text-slate-600">
+                It is especially useful for adults and learners who need maths
+                for a specific next step, such as university entry, healthcare
+                courses, teacher training, employment or a new apprenticeship.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {learnerTypes.map((type) => (
+                <div
+                  key={type}
+                  className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg"
+                >
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
+                    ✓
+                  </div>
+
+                  <h3 className="font-bold text-slate-950">{type}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+              Exam or course
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+              Which route do you need?
+            </h2>
+
+            <p className="mt-4 text-lg leading-8 text-slate-600">
+              Some learners are ready to book the exam now. Others need to
+              revise first with an online maths course before sitting the
+              official exam.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-[2rem] border border-emerald-100 bg-emerald-50/70 p-8 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+                Ready for the exam?
+              </p>
+
+              <h3 className="mt-3 text-2xl font-bold text-slate-950">
+                Book the online Functional Skills Maths exam
+              </h3>
+
+              <p className="mt-4 leading-7 text-slate-600">
+                Choose this route if you already feel confident with Functional
+                Skills Maths topics and want to take the official online exam.
+                Passing the exam is what gives you the qualification.
+              </p>
+
+              <Link
+                href="/online-functional-skills-maths-exam"
+                className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
+              >
+                View online exam route
+              </Link>
+            </div>
+
+            <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+                Need preparation first?
+              </p>
+
+              <h3 className="mt-3 text-2xl font-bold text-slate-950">
+                Start with the online maths course
+              </h3>
+
+              <p className="mt-4 leading-7 text-slate-600">
+                Choose this route if you want to build confidence first. The
+                online course helps you revise Entry Level, Level 1 and Level 2
+                topics, but you still need to pass the official exam to receive
+                the qualification.
+              </p>
+
+              <Link
+                href="/online-maths-course"
+                className="mt-6 inline-flex rounded-full border border-emerald-200 bg-white px-6 py-3 text-sm font-semibold text-emerald-800 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-700 hover:bg-emerald-50"
+              >
+                View online maths course
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-950 py-20 text-white">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-emerald-300">
+              Simple process
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+              How the online maths exam route works
+            </h2>
+
+            <p className="mt-4 text-lg leading-8 text-slate-300">
+              The online route is flexible, but candidates still need to prepare
+              properly before exam day by checking the guidance, setup and exam
+              requirements.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {howItWorks.map((item) => (
+              <div
+                key={item.step}
+                className="rounded-[2rem] border border-white/10 bg-white/5 p-7 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:bg-white/10"
+              >
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400 text-sm font-bold text-slate-950">
+                  {item.step}
+                </div>
+
+                <h3 className="text-xl font-bold">{item.title}</h3>
+
+                <p className="mt-4 leading-7 text-slate-300">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

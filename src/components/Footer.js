@@ -9,7 +9,7 @@ export default function Footer() {
           <Link href="/" className="inline-flex items-center">
             <div className="rounded-2xl bg-white px-3 py-2 shadow-lg shadow-emerald-950/30">
               <Image
-                src="/images/online-maths-exam-logo.png"
+                src="/images/online-maths-exam-logo.webp"
                 alt="Online Maths Exam"
                 width={260}
                 height={87}
@@ -93,12 +93,12 @@ export default function Footer() {
 
             <li>
               <a
-                href="https://www.intechcentre.com/courses/functional-skills-maths-level-2-exam/"
+                href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition hover:text-emerald-300"
               >
-                Intech Centre Maths Exam
+                Intech Centre Online Maths Exam
               </a>
             </li>
           </ul>

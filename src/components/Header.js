@@ -21,7 +21,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6 lg:py-1">
         <Link href="/" className="group flex items-center">
           <Image
-            src="/images/online-maths-exam-logo.png"
+            src="/images/online-maths-exam-logo.webp"
             alt="Online Maths Exam"
             width={260}
             height={87}

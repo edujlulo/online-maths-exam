@@ -7,6 +7,56 @@ export const metadata = {
     "Learn about Functional Skills Maths Level 2, GCSE equivalence, online exam structure, results, pass mark, preparation and booking routes through Intech Centre.",
 };
 
+const examFacts = [
+  {
+    label: "Awarding body",
+    value: "City & Guilds",
+    detail: "Functional Skills Maths Level 2",
+    icon: "✓",
+  },
+  {
+    label: "Qualification",
+    value: "Ofqual regulated",
+    detail: "Recognised UK qualification",
+    icon: "★",
+  },
+  {
+    label: "Exam style",
+    value: "Online exam",
+    detail: "Computer-based and remotely invigilated",
+    icon: "⌘",
+  },
+  {
+    label: "Duration",
+    value: "1h 45m",
+    detail: "Level 2 online exam time",
+    icon: "⏱",
+  },
+  {
+    label: "Cost",
+    value: "£180",
+    detail: "Per exam attempt",
+    icon: "£",
+  },
+  {
+    label: "Results",
+    value: "Usually within a week",
+    detail: "May take up to 20 working days",
+    icon: "↗",
+  },
+];
+
+const learnerReasons = [
+  "University applications",
+  "Nursing & healthcare courses",
+  "Teacher training",
+  "Apprenticeships",
+  "Construction courses",
+  "Career progression",
+  "Job applications",
+  "Adults returning to education",
+];
+
 const faqs = [
   {
     question: "What is Functional Skills Maths Level 2?",
@@ -63,9 +113,11 @@ export default function Level2Page() {
           <p className="inline-flex rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-emerald-800">
             Most popular level
           </p>
+
           <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
             Functional Skills Maths Level 2
           </h1>
+
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
             Functional Skills Maths Level 2 is the main route for learners who
             need a recognised GCSE equivalent maths qualification for
@@ -73,6 +125,47 @@ export default function Level2Page() {
             exam route allows eligible candidates to complete the exam remotely
             with online invigilation.
           </p>
+
+          <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-600">
+            <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+              GCSE Grade 4/C equivalent route
+            </span>
+            <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+              Online computer-based exam
+            </span>
+            <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+              City & Guilds
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-emerald-100 bg-white py-8">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+            {examFacts.map((fact) => (
+              <div
+                key={fact.label}
+                className="rounded-3xl border border-slate-200 bg-slate-50/70 p-5 shadow-sm transition hover:border-emerald-200 hover:bg-emerald-50/50"
+              >
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
+                  {fact.icon}
+                </div>
+
+                <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
+                  {fact.label}
+                </p>
+
+                <h2 className="mt-2 text-base font-bold text-slate-950">
+                  {fact.value}
+                </h2>
+
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {fact.detail}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -98,9 +191,14 @@ export default function Level2Page() {
 
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               <div className="rounded-2xl bg-emerald-50 p-5 ring-1 ring-emerald-100">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-700 text-sm font-bold text-white">
+                  ✓
+                </div>
+
                 <h3 className="font-bold text-slate-950">
                   Recognised qualification
                 </h3>
+
                 <p className="mt-2 text-sm leading-6 text-slate-600">
                   Awarded by City & Guilds and regulated by Ofqual, Functional
                   Skills Maths Level 2 is accepted by many organisations across
@@ -109,9 +207,14 @@ export default function Level2Page() {
               </div>
 
               <div className="rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
+                  %
+                </div>
+
                 <h3 className="font-bold text-slate-950">
                   Practical maths skills
                 </h3>
+
                 <p className="mt-2 text-sm leading-6 text-slate-600">
                   The exam focuses on real-world maths, including numbers,
                   percentages, ratios, measures, graphs, data and problem
@@ -120,7 +223,12 @@ export default function Level2Page() {
               </div>
 
               <div className="rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
+                  ⌘
+                </div>
+
                 <h3 className="font-bold text-slate-950">Online exam option</h3>
+
                 <p className="mt-2 text-sm leading-6 text-slate-600">
                   Learners can choose an online exam route and sit the exam
                   remotely if they meet the technical and room requirements.
@@ -129,29 +237,120 @@ export default function Level2Page() {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border border-emerald-100 bg-emerald-50/60 p-8 shadow-sm">
+          <div className="mt-12 rounded-3xl border border-emerald-100 bg-emerald-50/60 p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+              Exam structure
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold text-slate-950">
+              Calculator and non-calculator sections
+            </h2>
+
+            <p className="mt-4 max-w-4xl leading-7 text-slate-600">
+              The online Functional Skills Maths Level 2 exam is made up of two
+              sections. The final result is based on the total marks achieved
+              across both sections.
+            </p>
+
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
+              <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-sm font-bold text-white">
+                  25%
+                </div>
+
+                <h3 className="text-xl font-bold text-slate-950">
+                  Non-calculator section
+                </h3>
+
+                <p className="mt-3 leading-7 text-slate-600">
+                  This section lasts 25 minutes and counts for 25% of the total
+                  marks. Candidates are not allowed to use a calculator in this
+                  part.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-700 text-sm font-bold text-white">
+                  75%
+                </div>
+
+                <h3 className="text-xl font-bold text-slate-950">
+                  Calculator section
+                </h3>
+
+                <p className="mt-3 leading-7 text-slate-600">
+                  This section lasts 1 hour 20 minutes and counts for 75% of the
+                  total marks. Calculators are only allowed in this section.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
-                Exam structure
+                Who it helps
               </p>
-              <h2 className="mt-3 text-2xl font-bold text-slate-950">
-                Calculator and non-calculator sections
+
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+                Who needs Functional Skills Maths Level 2?
               </h2>
+
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                Many learners choose Level 2 because they need a recognised
+                maths qualification for a specific next step in education, work
+                or training.
+              </p>
+
               <p className="mt-4 leading-7 text-slate-600">
-                The Level 2 exam is 1 hour 45 minutes. The non-calculator
-                section is 25 minutes and the calculator section is 1 hour 20
-                minutes. The final result is based on the total marks across
-                both sections.
+                It is especially useful for adults and learners who need a GCSE
+                equivalent maths route for applications, career progression or
+                further study.
               </p>
             </div>
 
-            <div className="rounded-3xl border border-emerald-100 bg-white p-8 shadow-sm">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {learnerReasons.map((reason) => (
+                <div
+                  key={reason}
+                  className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg"
+                >
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
+                    ✓
+                  </div>
+
+                  <h3 className="font-bold text-slate-950">{reason}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-[2rem] border border-emerald-100 bg-white p-8 shadow-sm">
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
-                Preparation
+                Ready for the exam?
               </p>
+
               <h2 className="mt-3 text-2xl font-bold text-slate-950">
-                Prepare before you book
+                Book the online Level 2 exam
               </h2>
+
+              <p className="mt-4 leading-7 text-slate-600">
+                Choose this route if you already feel confident with Functional
+                Skills Maths topics and want to take the official online exam.
+                Passing the exam is what gives you the qualification.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] border border-emerald-100 bg-emerald-50/60 p-8 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+                Need preparation first?
+              </p>
+
+              <h2 className="mt-3 text-2xl font-bold text-slate-950">
+                Use the online maths course first
+              </h2>
+
               <p className="mt-4 leading-7 text-slate-600">
                 If you are not ready to sit the exam yet, you can revise with an
                 online Functional Skills Maths course covering Entry Level,
@@ -162,7 +361,7 @@ export default function Level2Page() {
         </div>
       </section>
 
-      <FAQSection faqs={faqs} />
+      <FAQSection title="Functional Skills Maths Level 2 FAQs" faqs={faqs} />
 
       <CTASection
         title="Need Functional Skills Maths Level 2?"

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 
@@ -6,6 +7,106 @@ export const metadata = {
   description:
     "Learn how the online Functional Skills Maths Level 2 exam works, including GCSE equivalence, exam structure, booking route, results, preparation and online course options.",
 };
+
+const examFacts = [
+  {
+    label: "Awarding body",
+    value: "City & Guilds",
+    detail: "Functional Skills Maths route",
+    icon: "✓",
+  },
+  {
+    label: "Qualification",
+    value: "Ofqual regulated",
+    detail: "Recognised UK qualification",
+    icon: "★",
+  },
+  {
+    label: "Exam style",
+    value: "Online exam",
+    detail: "Computer-based and remotely invigilated",
+    icon: "⌘",
+  },
+  {
+    label: "Cost",
+    value: "£180",
+    detail: "Per exam attempt",
+    icon: "£",
+  },
+  {
+    label: "Duration",
+    value: "1h 45m",
+    detail: "Level 2 online exam time",
+    icon: "⏱",
+  },
+  {
+    label: "Results",
+    value: "Usually within a week",
+    detail: "May take up to 20 working days",
+    icon: "↗",
+  },
+];
+
+const processSteps = [
+  {
+    step: "01",
+    title: "Book through Intech Centre",
+    description:
+      "Choose the online Functional Skills Maths exam route and complete the booking process using the current Intech Centre guidance.",
+  },
+  {
+    step: "02",
+    title: "Wait for approval",
+    description:
+      "After booking, Intech Centre processes the booking. Candidates then receive further instructions for the online exam route.",
+  },
+  {
+    step: "03",
+    title: "Check your setup",
+    description:
+      "Read the Candidate Guide, check your computer, internet connection, valid ID and room setup before exam day.",
+  },
+  {
+    step: "04",
+    title: "Sit the exam online",
+    description:
+      "Complete the computer-based exam from your own location with remote invigilation.",
+  },
+  {
+    step: "05",
+    title: "Receive your result",
+    description:
+      "Results normally come within a week, but may take up to 20 working days depending on marking and processing.",
+  },
+];
+
+const examDayChecklist = [
+  "Read the Candidate Guide carefully",
+  "Prepare a valid photo ID",
+  "Check your computer or laptop",
+  "Test your internet connection",
+  "Use a quiet and suitable exam room",
+  "Follow the City & Guilds / Talview email instructions",
+];
+
+const levelOptions = [
+  {
+    title: "Functional Skills Maths Level 1",
+    badge: "Build confidence",
+    description:
+      "Level 1 is useful for learners who want to strengthen practical maths skills before moving towards Level 2.",
+    link: "/functional-skills-maths-level-1",
+    label: "Learn about Level 1",
+  },
+  {
+    title: "Functional Skills Maths Level 2",
+    badge: "GCSE equivalent route",
+    description:
+      "Level 2 is the common route for learners who need a GCSE Grade 4/C equivalent maths qualification for work, university or apprenticeships.",
+    link: "/functional-skills-maths-level-2",
+    label: "Learn about Level 2",
+  },
+];
 
 const faqs = [
   {
@@ -79,9 +180,11 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
           <p className="inline-flex rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-emerald-800">
             Online Exam
           </p>
+
           <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
             Online Functional Skills Maths Exam
           </h1>
+
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
             The online Functional Skills Maths exam is designed for learners who
             need a recognised GCSE equivalent maths qualification for work,
@@ -89,67 +192,53 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
             exam can be taken remotely, with online invigilation and clear
             booking guidance from Intech Centre.
           </p>
+
+          <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-600">
+            <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+              Online computer-based exam
+            </span>
+            <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+              Level 1 and Level 2
+            </span>
+            <span className="rounded-full bg-white px-4 py-2 shadow-sm">
+              GCSE equivalent route
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-emerald-100 bg-white py-8">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+            {examFacts.map((fact) => (
+              <div
+                key={fact.label}
+                className="rounded-3xl border border-slate-200 bg-slate-50/70 p-5 shadow-sm transition hover:border-emerald-200 hover:bg-emerald-50/50"
+              >
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-sm font-bold text-emerald-800">
+                  {fact.icon}
+                </div>
+
+                <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
+                  {fact.label}
+                </p>
+
+                <h2 className="mt-2 text-base font-bold text-slate-950">
+                  {fact.value}
+                </h2>
+
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {fact.detail}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
-              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
-                Qualification
-              </p>
-              <h2 className="mt-3 text-xl font-bold text-slate-950">
-                GCSE equivalent route
-              </h2>
-              <p className="mt-3 leading-7 text-slate-600">
-                Functional Skills Maths Level 2 is widely used as a GCSE Maths
-                Grade 4/C equivalent for work, further education and
-                apprenticeships.
-              </p>
-            </div>
-
-            <div className="rounded-3xl border border-emerald-100 bg-emerald-50/60 p-6 shadow-sm">
-              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
-                Exam format
-              </p>
-              <h2 className="mt-3 text-xl font-bold text-slate-950">
-                Online computer-based exam
-              </h2>
-              <p className="mt-3 leading-7 text-slate-600">
-                The online Level 2 exam is computer-based, remotely invigilated
-                and awarded by City & Guilds.
-              </p>
-            </div>
-
-            <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
-              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
-                Duration
-              </p>
-              <h2 className="mt-3 text-xl font-bold text-slate-950">
-                1 hour 45 minutes
-              </h2>
-              <p className="mt-3 leading-7 text-slate-600">
-                The exam includes a 25-minute non-calculator section and a 1
-                hour 20 minute calculator section.
-              </p>
-            </div>
-
-            <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
-              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
-                Results
-              </p>
-              <h2 className="mt-3 text-xl font-bold text-slate-950">
-                Usually within a week
-              </h2>
-              <p className="mt-3 leading-7 text-slate-600">
-                Results normally come within a week, but may take up to 20
-                working days depending on marking and processing.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-12 rounded-3xl border border-emerald-100 bg-white p-8 shadow-sm">
+          <div className="rounded-3xl border border-emerald-100 bg-white p-8 shadow-sm">
             <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
               How the online exam works
             </p>
@@ -159,46 +248,211 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
             </h2>
 
             <p className="mt-4 max-w-4xl leading-7 text-slate-600">
-              The online Functional Skills Maths Level 2 exam allows learners to
-              sit the exam remotely instead of travelling to a centre.
-              Candidates must make sure their computer, internet connection, ID
-              and exam room are ready before the exam. The exam is monitored
-              online and candidates should follow the Candidate Guide carefully
-              to avoid problems on exam day.
+              The online Functional Skills Maths exam allows learners to sit the
+              exam remotely instead of travelling to a centre. Candidates must
+              make sure their computer, internet connection, ID and exam room
+              are ready before the exam. The exam is monitored online and
+              candidates should follow the Candidate Guide carefully to avoid
+              problems on exam day.
             </p>
 
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
-              <div className="rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200">
-                <h3 className="font-bold text-slate-950">1. Book online</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Choose the online Functional Skills Maths exam route and
-                  complete the booking process through Intech Centre.
-                </p>
-              </div>
+            <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+              {processSteps.map((item) => (
+                <div
+                  key={item.step}
+                  className="rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200 transition hover:-translate-y-1 hover:ring-emerald-200"
+                >
+                  <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-700 text-sm font-bold text-white">
+                    {item.step}
+                  </div>
 
-              <div className="rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200">
-                <h3 className="font-bold text-slate-950">
-                  2. Check your setup
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Read the Candidate Guide, check your system requirements and
-                  prepare your room, ID, computer and internet connection.
-                </p>
-              </div>
+                  <h3 className="font-bold text-slate-950">{item.title}</h3>
 
-              <div className="rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200">
-                <h3 className="font-bold text-slate-950">3. Sit the exam</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Complete the online exam under remote invigilation and wait
-                  for your result by email after marking.
-                </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:items-start">
+            <div className="rounded-3xl border border-emerald-100 bg-emerald-50/60 p-8 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+                Before exam day
+              </p>
+
+              <h2 className="mt-3 text-3xl font-bold text-slate-950">
+                Check your setup before the online exam
+              </h2>
+
+              <p className="mt-4 leading-7 text-slate-600">
+                Online exams are flexible, but candidates still need to prepare
+                carefully. A problem with your device, internet connection, ID
+                or room setup may affect your ability to sit the exam.
+              </p>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {examDayChecklist.map((item) => (
+                  <div
+                    key={item}
+                    className="flex gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-emerald-100"
+                  >
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-800">
+                      ✓
+                    </span>
+
+                    <p className="text-sm leading-6 text-slate-600">{item}</p>
+                  </div>
+                ))}
               </div>
+            </div>
+
+            <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+                Exam structure
+              </p>
+
+              <h2 className="mt-3 text-2xl font-bold text-slate-950">
+                Level 2 has two sections
+              </h2>
+
+              <div className="mt-6 space-y-4">
+                <div className="rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200">
+                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-950 text-sm font-bold text-white">
+                    25%
+                  </div>
+
+                  <h3 className="font-bold text-slate-950">
+                    Non-calculator section
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    25 minutes and 25% of the total marks.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-emerald-50 p-5 ring-1 ring-emerald-100">
+                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-700 text-sm font-bold text-white">
+                    75%
+                  </div>
+
+                  <h3 className="font-bold text-slate-950">
+                    Calculator section
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    1 hour 20 minutes and 75% of the total marks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+                Choose your level
+              </p>
+
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+                Level 1 or Level 2?
+              </h2>
+
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                Intech Centre provides online Functional Skills Maths exam
+                routes for Level 1 and Level 2. The right level depends on your
+                current ability and what you need the qualification for.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 lg:grid-cols-2">
+              {levelOptions.map((level) => (
+                <div
+                  key={level.title}
+                  className={`rounded-[2rem] border p-8 shadow-sm ${
+                    level.title.includes("Level 2")
+                      ? "border-emerald-100 bg-emerald-50/60"
+                      : "border-slate-200 bg-white"
+                  }`}
+                >
+                  <p className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-emerald-800 shadow-sm">
+                    {level.badge}
+                  </p>
+
+                  <h3 className="mt-5 text-2xl font-bold text-slate-950">
+                    {level.title}
+                  </h3>
+
+                  <p className="mt-4 leading-7 text-slate-600">
+                    {level.description}
+                  </p>
+
+                  <Link
+                    href={level.link}
+                    className="mt-6 inline-flex text-sm font-semibold text-emerald-800 transition hover:text-emerald-900"
+                  >
+                    {level.label} →
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-[2rem] border border-emerald-100 bg-white p-8 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+                Ready for the exam?
+              </p>
+
+              <h2 className="mt-3 text-2xl font-bold text-slate-950">
+                Book the online Functional Skills Maths exam
+              </h2>
+
+              <p className="mt-4 leading-7 text-slate-600">
+                Choose this route if you already feel confident with Functional
+                Skills Maths topics and want to take the official online exam.
+                Passing the exam is what gives you the qualification.
+              </p>
+
+              <a
+                href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
+              >
+                View Intech Centre exam route
+              </a>
+            </div>
+
+            <div className="rounded-[2rem] border border-emerald-100 bg-emerald-50/60 p-8 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+                Need preparation first?
+              </p>
+
+              <h2 className="mt-3 text-2xl font-bold text-slate-950">
+                Prepare with the online maths course
+              </h2>
+
+              <p className="mt-4 leading-7 text-slate-600">
+                Choose this route if you want to revise first. The online course
+                helps learners prepare for Functional Skills Maths topics, but
+                the qualification is only awarded after passing the official
+                exam.
+              </p>
+
+              <Link
+                href="/online-maths-course"
+                className="mt-6 inline-flex rounded-full border border-emerald-200 bg-white px-6 py-3 text-sm font-semibold text-emerald-800 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-700 hover:bg-emerald-50"
+              >
+                View online maths course
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <FAQSection faqs={faqs} />
+      <FAQSection title="Online Maths Exam FAQs" faqs={faqs} />
 
       <CTASection
         title="Ready to book your online Functional Skills Maths exam?"
