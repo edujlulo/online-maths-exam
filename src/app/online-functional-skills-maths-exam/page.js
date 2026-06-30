@@ -337,32 +337,32 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {examDayChecklist.map((item) => (
-                  <div
-                    key={item.text}
-                    className="flex gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-emerald-100"
-                  >
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-800">
-                      <item.icon className="h-4 w-4" aria-hidden="true" />
-                    </span>
+  {examDayChecklist.map((item) => (
+    <div
+      key={item.text}
+      className="flex gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-emerald-100"
+    >
+      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-800">
+        <item.icon className="h-4 w-4" aria-hidden="true" />
+      </span>
 
-                    <p className="text-sm leading-6 text-slate-600">
-                      {item.text}
-                    </p>
-                  </div>
-                ))}
-                <div className="mt-8 rounded-[1.75rem] border border-emerald-200 bg-white p-6 shadow-sm">
-  <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-    <div className="max-w-2xl">
+      <p className="text-sm leading-6 text-slate-600">{item.text}</p>
+    </div>
+  ))}
+</div>
+
+<div className="mt-8 rounded-[1.75rem] border border-emerald-200 bg-white p-6 shadow-sm md:p-7">
+  <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+    <div>
       <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
         Candidate guide
       </p>
 
-      <h3 className="mt-2 text-xl font-bold text-slate-950">
+      <h3 className="mt-2 text-xl font-bold leading-snug text-slate-950">
         Read the official City & Guilds Candidate Guide before exam day
       </h3>
 
-      <p className="mt-3 text-sm leading-6 text-slate-600">
+      <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">
         The Candidate Guide explains important online exam rules, system
         requirements, ID checks, room setup and what candidates should expect
         before starting the Functional Skills Maths exam.
@@ -373,13 +373,13 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
       href={candidateGuideUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex shrink-0 rounded-full bg-emerald-700 px-6 py-3 text-center text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
+      className="inline-flex w-full justify-center rounded-full bg-emerald-700 px-6 py-3 text-center text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800 sm:w-auto"
     >
       View Candidate Guide
     </a>
   </div>
 </div>
-              </div>
+
             </div>
 
             <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
