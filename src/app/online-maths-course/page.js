@@ -161,17 +161,17 @@ const faqs = [
   {
     question: "Does the online maths course include Level 1 and Level 2?",
     answer:
-      "Yes. Intech Centre's online Functional Skills Maths course includes all levels, including Entry Level, Level 1 and Level 2. This helps learners start from their current level and build up towards the exam.",
+      "Yes. The online Functional Skills Maths course includes all levels, including Entry Level, Level 1 and Level 2. This helps learners start from their current level and build up towards the exam.",
   },
   {
     question: "How long do I get access to the course?",
     answer:
-      "Intech Centre lists the online Functional Skills Maths course as including 2 months of unlimited access to online interactive learning.",
+      "The online Functional Skills Maths course is currently listed as including 2 months of unlimited access to online interactive learning.",
   },
   {
     question: "How much does the online Functional Skills Maths course cost?",
     answer:
-      "Intech Centre lists the course at £150 as a standalone course, or £75 when bought with an exam. Candidates should always check the current Intech Centre course page before purchasing.",
+      "The course is currently listed at £150 as a standalone course, or £75 when bought with an exam. Candidates should always check the current official course page before purchasing.",
   },
   {
     question: "Do I need the course before taking the exam?",
@@ -492,7 +492,7 @@ export default function OnlineMathsCoursePage() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
               >
-                View Intech Centre Online Maths Course
+                View Online Maths Course
               </a>
             </div>
 
@@ -528,9 +528,9 @@ export default function OnlineMathsCoursePage() {
 
       <CTASection
         title="Want to prepare before your online maths exam?"
-        description="Visit Intech Centre to check the latest Functional Skills Maths online course information, price and enrolment guidance."
+        description="Check the latest Functional Skills Maths online course information, price and official enrolment guidance before starting your preparation."
         link="https://www.intechcentre.com/courses/private-functional-skills-in-maths/"
-        label="View Intech Centre Online Maths Course"
+        label="View Online Maths Course"
       />
     </>
   );

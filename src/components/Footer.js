@@ -87,7 +87,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="transition hover:text-emerald-300"
               >
-                Visit Intech Centre
+                Official training provider website
               </a>
             </li>
 
@@ -98,7 +98,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="transition hover:text-emerald-300"
               >
-                Intech Centre Online Maths Exam
+                Official online maths exam booking page
               </a>
             </li>
           </ul>

@@ -64,15 +64,15 @@ const examFacts = [
 const processSteps = [
   {
     step: "01",
-    title: "Book through Intech Centre",
+    title: "Choose the official booking route",
     description:
-      "Choose the online Functional Skills Maths exam route and complete the booking process using the current Intech Centre guidance.",
+      "Choose the online Functional Skills Maths exam route and complete the booking process using the current official guidance.",
   },
   {
     step: "02",
-    title: "Wait for approval",
+    title: "Wait for confirmation",
     description:
-      "After booking, Intech Centre processes the booking. Candidates then receive further instructions for the online exam route.",
+      "After booking, your request is processed. Candidates then receive further instructions for the online exam route.",
   },
   {
     step: "03",
@@ -175,12 +175,12 @@ const faqs = [
   {
     question: "How much does the online Functional Skills Maths exam cost?",
     answer:
-      "Intech Centre lists the online Functional Skills Maths Level 1 or Level 2 exam at £180 per attempt. Candidates should always check the current price on the Intech Centre booking page before booking.",
+      "The online Functional Skills Maths Level 1 or Level 2 exam is currently listed at £180 per attempt. Candidates should always check the current price on the official booking page before booking.",
   },
   {
     question: "When are online exam slots available?",
     answer:
-      "Intech Centre lists online exam slots Monday to Friday at 8:00am, 11:30am and 4:00pm. City & Guilds may book the exam with some timing flexibility, so candidates should follow the time given in the Talview email.",
+      "Online exam slots are currently listed Monday to Friday at 8:00am, 11:30am and 4:00pm. City & Guilds may book the exam with some timing flexibility, so candidates should follow the time given in the Talview email.",
   },
   {
     question: "When will I receive my results?",
@@ -190,12 +190,12 @@ const faqs = [
   {
     question: "Can I prepare before booking the exam?",
     answer:
-      "Yes. Learners who are not ready can prepare with an online Functional Skills Maths course first. Intech Centre offers an online course designed for Functional Skills Maths Level 1 and Level 2 preparation.",
+      "Yes. Learners who are not ready can prepare with an online Functional Skills Maths course first. The online course is designed for Functional Skills Maths Level 1 and Level 2 preparation.",
   },
   {
     question: "Can I book Level 1 instead of Level 2?",
     answer:
-      "Intech Centre says learners who want City & Guilds Functional Skills Maths Level 1 should book through the Level 2 route and reply to the booking email clearly stating that they want the Level 1 exam.",
+      "Current booking guidance says learners who want City & Guilds Functional Skills Maths Level 1 should book through the Level 2 route and reply to the booking email clearly stating that they want the Level 1 exam.",
   },
   {
     question: "Do I need to read the Candidate Guide?",
@@ -205,7 +205,7 @@ const faqs = [
   {
     question: "Can I get extra time or access arrangements?",
     answer:
-      "If you have a learning difficulty, disability or need special access arrangements, you should contact Intech Centre before booking and provide the required evidence for your request.",
+      "If you have a learning difficulty, disability or need special access arrangements, you should contact the official exam provider before booking and provide the required evidence for your request.",
   },
 ];
 
@@ -227,7 +227,7 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
             need a recognised GCSE equivalent maths qualification for work,
             university, apprenticeships or further study. The Level 2 online
             exam can be taken remotely, with online invigilation and clear
-            booking guidance from Intech Centre.
+            official booking guidance.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-600">
@@ -399,8 +399,8 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
               </h2>
 
               <p className="mt-4 text-lg leading-8 text-slate-600">
-                Intech Centre provides online Functional Skills Maths exam
-                routes for Level 1 and Level 2. The right level depends on your
+                Online Functional Skills Maths exam routes are available for Level
+                1 and Level 2. The right level depends on your
                 current ability and what you need the qualification for.
               </p>
             </div>
@@ -460,7 +460,7 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
               >
-                View Intech Centre exam route
+                View official exam route
               </a>
             </div>
 
@@ -495,9 +495,9 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
 
       <CTASection
         title="Ready to book your online Functional Skills Maths exam?"
-        description="Visit Intech Centre to check the latest online exam price, available slots, Candidate Guide and booking instructions."
+        description="Check the latest online exam price, available slots, Candidate Guide and official booking instructions before choosing your exam date."
         link="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
-        label="Book Through Intech Centre"
+        label="View Official Booking Route"
       />
     </>
   );

@@ -85,23 +85,23 @@ const faqs = [
   {
     question: "Can I take Functional Skills Maths Level 1 online?",
     answer:
-      "Intech Centre provides online Functional Skills Maths exam routes. Their booking guidance says that if you want to book a City & Guilds Functional Skills Maths Level 1 exam, you should book through the Level 2 exam route and then reply to the booking email clearly stating that you want the Level 1 exam.",
+      "Online Functional Skills Maths exam routes are available. Current booking guidance says that if you want to book a City & Guilds Functional Skills Maths Level 1 exam, you should use the online Level 2 exam route and then reply to the booking email clearly stating that you want the Level 1 exam.",
   },
   {
     question:
       "How much does the online Functional Skills Maths Level 1 exam cost?",
     answer:
-      "Intech Centre lists the Functional Skills Maths Level 1 or Level 2 online exam at £180 for each attempt. Candidates should always check the current Intech Centre booking page before paying, as prices and booking details can change.",
+      "The Functional Skills Maths Level 1 or Level 2 online exam is currently listed at £180 for each attempt. Candidates should always check the official booking page before paying, as prices and booking details can change.",
   },
   {
     question: "Can I prepare for Level 1 online?",
     answer:
-      "Yes. Intech Centre's online Functional Skills Maths course includes Entry Level, Level 1 and Level 2, so learners can start from their current level and build up towards the exam.",
+      "Yes. The online Functional Skills Maths course includes Entry Level, Level 1 and Level 2, so learners can start from their current level and build up towards the exam.",
   },
   {
     question: "Should I choose Level 1 or Level 2?",
     answer:
-      "If you need a GCSE equivalent qualification for university, employment or an apprenticeship, Level 2 is usually the level requested. If you are not ready for Level 2 yet, Level 1 can be a good starting point to build confidence and strengthen your maths skills.",
+      "Yes. The online Functional Skills Maths course includes Entry Level, Level 1 and Level 2, so learners can start from their current level and build up towards the exam.",
   },
   {
     question: "Does completing the course give me the qualification?",
@@ -207,9 +207,8 @@ export default function Level1Page() {
               </h2>
 
               <p className="mt-3 leading-7 text-slate-600">
-                Intech Centre's online maths course includes Entry Level, Level
-                1 and Level 2, helping learners start from the level that suits
-                them.
+                The online maths course includes Entry Level, Level 1 and Level
+                2, helping learners start from the level that suits them.
               </p>
             </div>
           </div>
@@ -249,9 +248,9 @@ export default function Level1Page() {
             </h2>
 
             <p className="mt-4 max-w-4xl leading-7 text-slate-600">
-              Intech Centre's online Functional Skills Maths course includes
-              Entry Level, Level 1 and Level 2. This helps learners start from
-              their current ability and build towards the level they need.
+              The online Functional Skills Maths course includes Entry Level,
+              Level 1 and Level 2. This helps learners start from their current
+              ability and build towards the level they need.
             </p>
 
             <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -339,14 +338,14 @@ export default function Level1Page() {
                 <Route className="h-6 w-6" aria-hidden="true" />
               </div>
               <h2 className="mt-3 text-2xl font-bold text-slate-950">
-                How to book Level 1 through Intech Centre
+                How to book the Level 1 online exam route
               </h2>
 
               <p className="mt-4 leading-7 text-slate-600">
-                Intech Centre's guidance says that learners who want City &
-                Guilds Functional Skills Maths Level 1 should book through the
-                online Level 2 exam route and then reply to the booking email,
-                clearly stating that they want the Level 1 exam.
+                Current booking guidance says that learners who want City &
+                Guilds Functional Skills Maths Level 1 should use the online
+                Level 2 exam route and then reply to the booking email, clearly
+                stating that they want the Level 1 exam.
               </p>
 
               <a
@@ -355,7 +354,7 @@ export default function Level1Page() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
               >
-                View Intech Centre Level 1 Booking Route
+                View Level 1 Booking Route
               </a>
             </div>
 
@@ -393,7 +392,7 @@ export default function Level1Page() {
 
       <CTASection
         title="Ready to check the Level 1 online exam route?"
-        description="Visit Intech Centre's online Functional Skills Maths exam page and follow their booking guidance if you want to request the Level 1 exam."
+        description="Visit the official online Functional Skills Maths exam page and follow the booking guidance if you want to request the Level 1 exam."
         link="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
         label="View Online Exam Booking Route"
       />

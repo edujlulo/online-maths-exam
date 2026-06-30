@@ -26,7 +26,7 @@ const homeFaqs = [
   {
     question: "Can I take Functional Skills Maths Level 2 online?",
     answer:
-      "Yes. Intech Centre offers an online Functional Skills Maths Level 2 exam route where learners can take the exam remotely from their own location, provided their computer, internet connection and room meet the online exam requirements.",
+      "Yes. Learners can take the Functional Skills Maths Level 2 exam online from their own location, provided their computer, internet connection, ID and room setup meet the online exam requirements.",
   },
   {
     question: "Is Functional Skills Maths Level 2 equivalent to GCSE Maths?",
@@ -57,7 +57,7 @@ const homeFaqs = [
   {
     question: "Where can I book the online Functional Skills Maths exam?",
     answer:
-      "This website explains the online Functional Skills Maths exam route, Level 1, Level 2 and preparation options. To book the exam, learners should follow the current booking information from Intech Centre’s official online Functional Skills Maths exam page.",
+      "This website explains the online Functional Skills Maths exam route, Level 1, Level 2 and preparation options. To book the exam, learners should follow the current booking information from the official online Functional Skills Maths exam booking page.",
   },
 ];
 
@@ -390,20 +390,20 @@ export default function Home() {
                 <p className="mt-4 leading-7 text-slate-600">
                   This website explains the Functional Skills Maths exam route,
                   Level 1, Level 2 and preparation options. For current exam
-                  booking information, prices and availability, visit Intech
-                  Centre’s official online Functional Skills Maths exam page.
+                  booking information, prices and availability, use the official
+                  online Functional Skills Maths exam booking page.
                 </p>
               </div>
 
               <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-emerald-100">
                 <h3 className="text-xl font-bold text-slate-950">
-                  Book through Intech Centre
+                  Check current exam availability
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                  Check the latest online Functional Skills Maths exam guidance,
-                  including booking details, candidate information and available
-                  exam route.
+                  Review the latest online Functional Skills Maths exam
+                  guidance, including booking details, candidate information,
+                  requirements and available exam route.
                 </p>
 
                 <a
@@ -412,7 +412,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
                 >
-                  View Intech Centre Exam Route
+                  View official exam booking page
                 </a>
               </div>
             </div>

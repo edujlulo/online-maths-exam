@@ -26,7 +26,7 @@ import {
 export const metadata = {
   title: "Functional Skills Maths Level 2 | GCSE Equivalent Maths",
   description:
-    "Learn about Functional Skills Maths Level 2, GCSE equivalence, online exam structure, results, pass mark, preparation and booking routes through Intech Centre.",
+    "Learn about Functional Skills Maths Level 2, GCSE equivalence, online exam structure, results, pass mark, preparation and official online booking routes.",
 };
 
 const examFacts = [
@@ -122,7 +122,7 @@ const faqs = [
   {
     question: "Can I take Functional Skills Maths Level 2 online?",
     answer:
-      "Yes. Intech Centre offers an online Functional Skills Maths Level 2 exam route. The exam is computer-based, remotely invigilated and can be taken from your own location if your setup meets the exam requirements.",
+      "Yes. An online Functional Skills Maths Level 2 exam route is available. The exam is computer-based, remotely invigilated and can be taken from your own location if your setup meets the exam requirements.",
   },
   {
     question: "How long is the Functional Skills Maths Level 2 exam?",
@@ -132,7 +132,7 @@ const faqs = [
   {
     question: "What is the pass mark for Functional Skills Maths Level 2?",
     answer:
-      "Intech Centre lists the City & Guilds indicative pass mark for Functional Skills Mathematics Level 2 as 31 out of 60, around 52%. This is indicative and can vary depending on the paper.",
+      "The City & Guilds indicative pass mark for Functional Skills Mathematics Level 2 is listed as 31 out of 60, around 52%. This is indicative and can vary depending on the paper.",
   },
   {
     question: "How quickly will I get my result?",
@@ -398,7 +398,7 @@ export default function Level2Page() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
               >
-                View Intech Centre Level 2 Exam
+                View Official Level 2 Exam Route
               </a>
             </div>
 
@@ -431,7 +431,7 @@ export default function Level2Page() {
 
       <CTASection
         title="Need Functional Skills Maths Level 2?"
-        description="Check the online exam information, current price, available slots and booking route through Intech Centre."
+        description="Check the online exam information, current price, available slots and official booking route before choosing your exam date."
         link="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
         label="View Online Level 2 Exam"
       />
