@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function CTASection({ title, description, link, label }) {
   return (
     <section className="bg-white py-20">
@@ -21,12 +19,14 @@ export default function CTASection({ title, description, link, label }) {
               {description}
             </p>
 
-            <Link
-              href={link}
-              className="mt-8 inline-flex rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-emerald-800 shadow-lg transition hover:-translate-y-0.5 hover:bg-emerald-50"
-            >
-              {label}
-            </Link>
+            <a
+  href={link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-8 inline-flex rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-emerald-800 shadow-lg transition hover:-translate-y-0.5 hover:bg-emerald-50"
+>
+  {label}
+</a>
           </div>
         </div>
       </div>

@@ -79,29 +79,40 @@ export default function Footer() {
             Useful links
           </h3>
 
-          <ul className="mt-5 space-y-3 text-sm text-slate-300">
-            <li>
-              <a
-                href="https://www.intechcentre.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition hover:text-emerald-300"
-              >
-                Official training provider website
-              </a>
-            </li>
+         <ul className="mt-5 space-y-3 text-sm text-slate-300">
+  <li>
+    <a
+      href="https://www.intechcentre.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition hover:text-emerald-300"
+    >
+      Official training provider website
+    </a>
+  </li>
 
-            <li>
-              <a
-                href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition hover:text-emerald-300"
-              >
-                Official online maths exam booking page
-              </a>
-            </li>
-          </ul>
+  <li>
+    <a
+      href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition hover:text-emerald-300"
+    >
+      Official online maths exam booking page
+    </a>
+  </li>
+
+  <li>
+   <a
+  href="https://www.cityandguilds.com/-/media/cityandguilds-site/documents/delivering-our-qualifications/remote-invigilation/remote-invigilation-candidate-guide-pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="transition hover:text-emerald-300"
+>
+  City & Guilds Candidate Guide
+</a>
+  </li>
+</ul>
         </div>
 
         <div>

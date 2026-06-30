@@ -416,12 +416,14 @@ export default function Level2Page() {
                 online Functional Skills Maths course covering Entry Level,
                 Level 1 and Level 2 topics before booking your exam.
               </p>
-              <Link
-                href="/online-maths-course"
-                className="mt-6 inline-flex rounded-full border border-emerald-200 bg-white px-6 py-3 text-sm font-semibold text-emerald-800 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-700 hover:bg-emerald-50"
-              >
-                View Online Maths Course
-              </Link>
+              <a
+  href="https://www.intechcentre.com/courses/private-functional-skills-in-maths/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 inline-flex rounded-full border border-emerald-200 bg-white px-6 py-3 text-sm font-semibold text-emerald-800 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-700 hover:bg-emerald-50"
+>
+  View Online Maths Course
+</a>
             </div>
           </div>
         </div>

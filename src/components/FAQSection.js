@@ -26,6 +26,17 @@ export default function FAQSection({
               </h3>
 
               <p className="mt-3 leading-7 text-slate-600">{faq.answer}</p>
+
+{faq.link && (
+  <a
+    href={faq.link.href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-4 inline-flex text-sm font-semibold text-emerald-800 transition hover:text-emerald-900"
+  >
+    {faq.link.label} →
+  </a>
+)}
             </div>
           ))}
         </div>

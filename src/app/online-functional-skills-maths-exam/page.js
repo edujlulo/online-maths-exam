@@ -19,8 +19,11 @@ import {
 export const metadata = {
   title: "Online Functional Skills Maths Exam | Level 1 & Level 2",
   description:
-    "Learn how the online Functional Skills Maths Level 2 exam works, including GCSE equivalence, exam structure, booking route, results, preparation and online course options.",
+  "Learn how the online Functional Skills Maths Level 2 exam works, including GCSE equivalence, Candidate Guide, exam structure, booking route, results, preparation and online course options.",
 };
+
+const candidateGuideUrl =
+  "https://www.cityandguilds.com/-/media/cityandguilds-site/documents/delivering-our-qualifications/remote-invigilation/remote-invigilation-candidate-guide-pdf";
 
 const examFacts = [
   {
@@ -197,11 +200,15 @@ const faqs = [
     answer:
       "Current booking guidance says learners who want City & Guilds Functional Skills Maths Level 1 should book through the Level 2 route and reply to the booking email clearly stating that they want the Level 1 exam.",
   },
-  {
-    question: "Do I need to read the Candidate Guide?",
-    answer:
-      "Yes. For the online exam, candidates should read the Candidate Guide carefully before booking and before exam day so they understand the online exam rules, system requirements and room requirements.",
+{
+  question: "Do I need to read the Candidate Guide before the online exam?",
+  answer:
+    "Yes. Candidates should read the official City & Guilds Candidate Guide before booking and before exam day. It helps explain the online exam rules, system requirements, ID checks, room setup and what to expect during the remote invigilation process.",
+  link: {
+    href: candidateGuideUrl,
+    label: "View Candidate Guide",
   },
+},
   {
     question: "Can I get extra time or access arrangements?",
     answer:
@@ -344,6 +351,34 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
                     </p>
                   </div>
                 ))}
+                <div className="mt-8 rounded-[1.75rem] border border-emerald-200 bg-white p-6 shadow-sm">
+  <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+    <div className="max-w-2xl">
+      <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+        Candidate guide
+      </p>
+
+      <h3 className="mt-2 text-xl font-bold text-slate-950">
+        Read the official City & Guilds Candidate Guide before exam day
+      </h3>
+
+      <p className="mt-3 text-sm leading-6 text-slate-600">
+        The Candidate Guide explains important online exam rules, system
+        requirements, ID checks, room setup and what candidates should expect
+        before starting the Functional Skills Maths exam.
+      </p>
+    </div>
+
+    <a
+      href={candidateGuideUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex shrink-0 rounded-full bg-emerald-700 px-6 py-3 text-center text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
+    >
+      View Candidate Guide
+    </a>
+  </div>
+</div>
               </div>
             </div>
 
