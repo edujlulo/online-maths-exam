@@ -4,6 +4,7 @@ export const blogPosts = [
     title: "Online Functional Skills Maths Level 2 Exam: Complete Guide",
     category: "Exam guide",
     date: "2026-06-25",
+    publishDate: "2026-06-30",
     updatedAt: "2026-06-26",
     readingTime: "6 min read",
     featured: true,
@@ -82,6 +83,7 @@ export const blogPosts = [
     title: "What Is Functional Skills Maths?",
     category: "Beginner guide",
     date: "2026-06-25",
+    publishDate: "2026-06-30",
     updatedAt: "2026-06-26",
     readingTime: "5 min read",
     featured: false,
@@ -153,6 +155,7 @@ export const blogPosts = [
     title: "Functional Skills Maths Level 2 vs GCSE Maths",
     category: "GCSE equivalent",
     date: "2026-06-25",
+    publishDate: "2026-06-30",
     updatedAt: "2026-06-26",
     readingTime: "5 min read",
     featured: false,
@@ -225,6 +228,7 @@ export const blogPosts = [
     title: "How to Prepare for an Online Functional Skills Maths Exam",
     category: "Preparation",
     date: "2026-06-25",
+    publishDate: "2026-07-07",
     updatedAt: "2026-06-26",
     readingTime: "6 min read",
     featured: false,
@@ -302,6 +306,7 @@ export const blogPosts = [
     title: "Functional Skills Maths Level 1 vs Level 2",
     category: "Levels guide",
     date: "2026-06-26",
+        publishDate: "2026-07-07",
     updatedAt: "2026-06-26",
     readingTime: "5 min read",
     featured: false,
@@ -373,6 +378,7 @@ export const blogPosts = [
     title: "Do You Need a Course Before the Functional Skills Maths Exam?",
     category: "Course guide",
     date: "2026-06-26",
+        publishDate: "2026-07-14",
     updatedAt: "2026-06-26",
     readingTime: "5 min read",
     featured: false,
@@ -444,6 +450,7 @@ export const blogPosts = [
     title: "Online Maths Exam Setup Checklist",
     category: "Exam day",
     date: "2026-06-26",
+    publishDate: "2026-07-14",
     updatedAt: "2026-06-26",
     readingTime: "4 min read",
     featured: false,
@@ -520,6 +527,7 @@ export const blogPosts = [
     title: "Functional Skills Maths for University, Work and Careers",
     category: "Learner guide",
     date: "2026-06-26",
+    publishDate: "2026-07-21",
     updatedAt: "2026-06-26",
     readingTime: "5 min read",
     featured: false,
@@ -589,23 +597,52 @@ export const blogPosts = [
   },
 ];
 
+function getTodayInLondon() {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/London",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+}
+
+export function isBlogPostPublished(post) {
+  const publishDate = post.publishDate || post.date;
+
+  return publishDate <= getTodayInLondon();
+}
+
+export function getPublishedBlogPosts() {
+  return [...blogPosts]
+    .filter(isBlogPostPublished)
+    .sort(
+      (a, b) =>
+        new Date(b.publishDate || b.date).getTime() -
+        new Date(a.publishDate || a.date).getTime(),
+    );
+}
+
 export function getBlogPostBySlug(slug) {
   return blogPosts.find((post) => post.slug === slug);
 }
 
-export function getFeaturedBlogPost() {
-  return blogPosts.find((post) => post.featured) || blogPosts[0];
+export function getPublishedBlogPostBySlug(slug) {
+  return getPublishedBlogPosts().find((post) => post.slug === slug);
 }
 
 export function getRelatedBlogPosts(post, limit = 3) {
+  const publishedPosts = getPublishedBlogPosts();
+
   if (!post?.relatedPosts?.length) {
-    return blogPosts
+    return publishedPosts
       .filter((relatedPost) => relatedPost.slug !== post.slug)
       .slice(0, limit);
   }
 
   return post.relatedPosts
-    .map((slug) => getBlogPostBySlug(slug))
+    .map((slug) =>
+      publishedPosts.find((relatedPost) => relatedPost.slug === slug),
+    )
     .filter(Boolean)
     .slice(0, limit);
 }

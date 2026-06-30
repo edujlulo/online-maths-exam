@@ -1,4 +1,6 @@
-import { blogPosts } from "@/data/blogPosts";
+import { getPublishedBlogPosts } from "@/data/blogPosts";
+
+export const revalidate = 3600;
 
 export default function sitemap() {
   const baseUrl = "https://onlinemathsexam.co.uk";
@@ -19,12 +21,14 @@ export default function sitemap() {
     priority: page === "" ? 1 : 0.8,
   }));
 
-  const blogPages = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "monthly",
-    priority: 0.6,
-  }));
+  const publishedPosts = getPublishedBlogPosts();
+
+  const blogPages = publishedPosts.map((post) => ({
+  url: `${baseUrl}/blog/${post.slug}`,
+  lastModified: new Date(post.updatedAt || post.publishDate || post.date),
+  changeFrequency: "monthly",
+  priority: 0.6,
+}));
 
   return [...staticPages, ...blogPages];
 }

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  blogPosts,
-  getBlogPostBySlug,
+  getPublishedBlogPosts,
+  getPublishedBlogPostBySlug,
   getRelatedBlogPosts,
 } from "@/data/blogPosts";
 import CTASection from "@/components/CTASection";
@@ -10,15 +10,17 @@ import FAQSection from "@/components/FAQSection";
 
 const baseUrl = "https://onlinemathsexam.co.uk";
 
+export const revalidate = 3600;
+
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({
+  return getPublishedBlogPosts().map((post) => ({
     slug: post.slug,
   }));
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
+  const post = getPublishedBlogPostBySlug(slug);
 
   if (!post) {
     return {
@@ -26,18 +28,29 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  return {
+return {
+  title: post.title,
+  description: post.description,
+  alternates: {
+    canonical: `${baseUrl}/blog/${post.slug}`,
+  },
+  openGraph: {
     title: post.title,
     description: post.description,
-    openGraph: {
-      title: post.title,
-      description: post.description,
-      url: `${baseUrl}/blog/${post.slug}`,
-      siteName: "Online Maths Exam",
-      type: "article",
-      locale: "en_GB",
-    },
-  };
+    url: `${baseUrl}/blog/${post.slug}`,
+    siteName: "Online Maths Exam",
+    type: "article",
+    locale: "en_GB",
+    images: [
+      {
+        url: `${baseUrl}${post.image}`,
+        alt: post.imageAlt,
+      },
+    ],
+    publishedTime: post.publishDate || post.date,
+    modifiedTime: post.updatedAt || post.publishDate || post.date,
+  },
+};
 }
 
 function formatDate(date) {
@@ -77,8 +90,9 @@ function JsonLd({ post }) {
     "@type": "Article",
     headline: post.title,
     description: post.description,
-    datePublished: post.date,
-    dateModified: post.updatedAt || post.date,
+    datePublished: post.publishDate || post.date,
+dateModified: post.updatedAt || post.publishDate || post.date,
+image: `${baseUrl}${post.image}`,
     author: {
       "@type": "Organization",
       name: "Online Maths Exam",
@@ -159,7 +173,7 @@ function JsonLd({ post }) {
 
 export default async function BlogPostPage({ params }) {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
+  const post = getPublishedBlogPostBySlug(slug);
 
   if (!post) {
     notFound();
