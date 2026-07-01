@@ -99,9 +99,9 @@ const faqs = [
       "Yes. The online Functional Skills Maths course includes Entry Level, Level 1 and Level 2, so learners can start from their current level and build up towards the exam.",
   },
   {
-    question: "Should I choose Level 1 or Level 2?",
+    question: "Should I choose Functional Skills Maths Level 1 or Level 2?",
     answer:
-      "Yes. The online Functional Skills Maths course includes Entry Level, Level 1 and Level 2, so learners can start from their current level and build up towards the exam.",
+      "If you need a GCSE equivalent maths qualification for university, employment or an apprenticeship, Level 2 is usually the level requested. If you are not ready for Level 2 yet, Level 1 can be a useful starting point to build confidence first.",
   },
   {
     question: "Does completing the course give me the qualification?",

@@ -471,7 +471,7 @@ export default function Home() {
       <CTASection
         title="Need a GCSE equivalent maths qualification?"
         description="Explore the online Functional Skills Maths exam route, compare Level 1 and Level 2, and understand whether you should book the exam directly or prepare with an online course first."
-        link="/online-functional-skills-maths-exam"
+        link="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
         label="Explore Online Maths Exam"
       />
     </>
