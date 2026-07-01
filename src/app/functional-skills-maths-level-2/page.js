@@ -173,7 +173,7 @@ export default function Level2Page() {
             Functional Skills Maths Level 2 is the main route for learners who
             need a recognised GCSE equivalent maths qualification for
             university, work, apprenticeships or career progression. The online
-            exam route allows eligible candidates to complete the exam remotely
+            exam option allows eligible candidates to complete the exam remotely
             with online invigilation.
           </p>
 
@@ -388,8 +388,16 @@ export default function Level2Page() {
 
               <p className="mt-4 leading-7 text-slate-600">
                 Choose this route if you already feel confident with Functional
-                Skills Maths topics and want to take the official online exam.
-                Passing the exam is what gives you the qualification.
+                Skills Maths topics and want to{" "}
+                <a
+                  href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-emerald-800 underline decoration-emerald-300 underline-offset-4 transition hover:text-emerald-900"
+                >
+                  book your online maths exam
+                </a>
+                . Passing the exam is what gives you the qualification.
               </p>
 
               <a
@@ -398,7 +406,7 @@ export default function Level2Page() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
               >
-                View Official Level 2 Exam Route
+                Book Your Exam Now
               </a>
             </div>
 
@@ -417,13 +425,13 @@ export default function Level2Page() {
                 Level 1 and Level 2 topics before booking your exam.
               </p>
               <a
-  href="https://www.intechcentre.com/courses/private-functional-skills-in-maths/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-6 inline-flex rounded-full border border-emerald-200 bg-white px-6 py-3 text-sm font-semibold text-emerald-800 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-700 hover:bg-emerald-50"
->
-  View Online Maths Course
-</a>
+                href="https://www.intechcentre.com/courses/private-functional-skills-in-maths/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex rounded-full border border-emerald-200 bg-white px-6 py-3 text-sm font-semibold text-emerald-800 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-700 hover:bg-emerald-50"
+              >
+                View Online Maths Course
+              </a>
             </div>
           </div>
         </div>
@@ -432,10 +440,10 @@ export default function Level2Page() {
       <FAQSection title="Functional Skills Maths Level 2 FAQs" faqs={faqs} />
 
       <CTASection
-        title="Need Functional Skills Maths Level 2?"
-        description="Check the online exam information, current price, available slots and official booking route before choosing your exam date."
+        title="Ready to book your Functional Skills Maths Level 2 exam?"
+        description="Check the online exam information, price and available booking options before choosing your exam date."
         link="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
-        label="View Online Level 2 Exam"
+        label="Book Your Exam Now"
       />
     </>
   );

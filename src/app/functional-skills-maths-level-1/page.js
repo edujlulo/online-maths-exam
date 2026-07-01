@@ -234,7 +234,16 @@ export default function Level1Page() {
               training, nursing, healthcare, construction, policing or career
               progression, you may eventually need Functional Skills Maths Level
               2. However, Level 1 can be the right first step if you are not yet
-              ready for the Level 2 exam.
+              ready to{" "}
+              <a
+                href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-emerald-800 underline decoration-emerald-300 underline-offset-4 transition hover:text-emerald-900"
+              >
+                book your online maths exam
+              </a>
+              .
             </p>
           </div>
 
@@ -332,20 +341,21 @@ export default function Level1Page() {
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             <div className="rounded-3xl border border-emerald-100 bg-emerald-50/60 p-8 shadow-sm">
               <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
-                Online exam route
+                Online exam booking
               </p>
+
               <div className="mt-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-700 text-white">
                 <Route className="h-6 w-6" aria-hidden="true" />
               </div>
+
               <h2 className="mt-3 text-2xl font-bold text-slate-950">
-                How to book the Level 1 online exam route
+                Book your Functional Skills Maths Level 1 exam
               </h2>
 
               <p className="mt-4 leading-7 text-slate-600">
-                Current booking guidance says that learners who want City &
-                Guilds Functional Skills Maths Level 1 should use the online
-                Level 2 exam route and then reply to the booking email, clearly
-                stating that they want the Level 1 exam.
+                If you want to take Functional Skills Maths Level 1 online,
+                start with the online exam booking route and follow the
+                instructions after booking to request the Level 1 exam.
               </p>
 
               <a
@@ -354,7 +364,7 @@ export default function Level1Page() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
               >
-                View Level 1 Booking Route
+                Book Your Exam Now
               </a>
             </div>
 
@@ -391,10 +401,10 @@ export default function Level1Page() {
       <FAQSection title="Functional Skills Maths Level 1 FAQs" faqs={faqs} />
 
       <CTASection
-        title="Ready to check the Level 1 online exam route?"
-        description="Visit the official online Functional Skills Maths exam page and follow the booking guidance if you want to request the Level 1 exam."
+        title="Ready to book your Functional Skills Maths exam?"
+        description="Start your online exam booking and follow the instructions to request the Level 1 exam route."
         link="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
-        label="View Online Exam Booking Route"
+        label="Book Your Exam Now"
       />
     </>
   );

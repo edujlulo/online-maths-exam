@@ -1,12 +1,30 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  const handleFooterNavClick = (href) => {
+    if (pathname === href) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <footer className="border-t border-emerald-900 bg-slate-950 text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr] lg:gap-14">
         <div>
-          <Link href="/" className="inline-flex items-center">
+          <Link
+            href="/"
+            onClick={() => handleFooterNavClick("/")}
+            className="inline-flex items-center"
+          >
             <div className="rounded-2xl bg-white px-3 py-2 shadow-lg shadow-emerald-950/30">
               <Image
                 src="/images/online-maths-exam-logo.webp"
@@ -33,6 +51,9 @@ export default function Footer() {
             <li>
               <Link
                 href="/online-functional-skills-maths-exam"
+                onClick={() =>
+                  handleFooterNavClick("/online-functional-skills-maths-exam")
+                }
                 className="transition hover:text-emerald-300"
               >
                 Online Maths Exam
@@ -42,6 +63,9 @@ export default function Footer() {
             <li>
               <Link
                 href="/functional-skills-maths-level-2"
+                onClick={() =>
+                  handleFooterNavClick("/functional-skills-maths-level-2")
+                }
                 className="transition hover:text-emerald-300"
               >
                 Functional Skills Maths Level 2
@@ -51,6 +75,9 @@ export default function Footer() {
             <li>
               <Link
                 href="/functional-skills-maths-level-1"
+                onClick={() =>
+                  handleFooterNavClick("/functional-skills-maths-level-1")
+                }
                 className="transition hover:text-emerald-300"
               >
                 Functional Skills Maths Level 1
@@ -60,6 +87,7 @@ export default function Footer() {
             <li>
               <Link
                 href="/online-maths-course"
+                onClick={() => handleFooterNavClick("/online-maths-course")}
                 className="transition hover:text-emerald-300"
               >
                 Online Maths Course
@@ -67,55 +95,18 @@ export default function Footer() {
             </li>
 
             <li>
-              <Link href="/blog" className="transition hover:text-emerald-300">
+              <Link
+                href="/blog"
+                onClick={() => handleFooterNavClick("/blog")}
+                className="transition hover:text-emerald-300"
+              >
                 Blog
               </Link>
             </li>
           </ul>
         </div>
 
-        <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-emerald-300">
-            Useful links
-          </h3>
-
-         <ul className="mt-5 space-y-3 text-sm text-slate-300">
-  <li>
-    <a
-      href="https://www.intechcentre.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition hover:text-emerald-300"
-    >
-      Official training provider website
-    </a>
-  </li>
-
-  <li>
-    <a
-      href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition hover:text-emerald-300"
-    >
-      Official online maths exam booking page
-    </a>
-  </li>
-
-  <li>
-   <a
-  href="https://www.cityandguilds.com/-/media/cityandguilds-site/documents/delivering-our-qualifications/remote-invigilation/remote-invigilation-candidate-guide-pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="transition hover:text-emerald-300"
->
-  City & Guilds Candidate Guide
-</a>
-  </li>
-</ul>
-        </div>
-
-        <div>
+        <div className="md:col-span-2 lg:col-span-1">
           <h3 className="text-sm font-semibold uppercase tracking-wide text-emerald-300">
             Contact
           </h3>
@@ -142,7 +133,7 @@ export default function Footer() {
                 />
               </svg>
 
-              <span>90 Colmer Road, London, SW16 5LA</span>
+              <span>59 Colmer Road, London, SW16 5LA</span>
             </p>
 
             <p className="flex items-center gap-3">
@@ -193,17 +184,6 @@ export default function Footer() {
               </a>
             </p>
           </div>
-        </div>
-
-        <div className="rounded-2xl border border-emerald-800/50 bg-emerald-950/40 p-5 md:col-span-2 lg:col-span-4">
-          <p className="text-sm font-semibold text-emerald-200">
-            Need Functional Skills Maths?
-          </p>
-
-          <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-300">
-            Compare Level 1, Level 2 and online preparation before choosing your
-            exam route.
-          </p>
         </div>
       </div>
 

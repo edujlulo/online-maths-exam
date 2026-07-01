@@ -229,7 +229,7 @@ export default function OnlineMathsCoursePage() {
             Prepare for Functional Skills Maths Level 1 or Level 2 with an
             online self-learning course designed around the exam curriculum. The
             course covers Entry Level to Level 2, helping learners build
-            confidence before booking the official exam.
+            confidence before booking their online maths exam.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-600">
@@ -314,8 +314,16 @@ export default function OnlineMathsCoursePage() {
             <p className="mt-4 max-w-4xl leading-7 text-slate-600">
               The online course helps you prepare, but it does not automatically
               give you the qualification. To receive a Functional Skills Maths
-              qualification, you must take and pass the official Functional
-              Skills Maths exam.
+              qualification, you must{" "}
+              <a
+                href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-emerald-800 underline decoration-emerald-300 underline-offset-4 transition hover:text-emerald-900"
+              >
+                book and pass the online maths exam
+              </a>
+              .
             </p>
 
             <div className="mt-8 grid gap-6 md:grid-cols-2">
@@ -492,7 +500,7 @@ export default function OnlineMathsCoursePage() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
               >
-                View Online Maths Course
+                Start Your Online Course
               </a>
             </div>
 
@@ -504,21 +512,23 @@ export default function OnlineMathsCoursePage() {
                 <CircleCheck className="h-6 w-6" aria-hidden="true" />
               </div>
               <h2 className="mt-3 text-2xl font-bold text-slate-950">
-                Book the online maths exam
+                Book your online maths exam
               </h2>
 
               <p className="mt-4 leading-7 text-slate-600">
                 Choose this route if you already feel ready to sit the exam.
-                Passing the official Functional Skills Maths exam is what gives
-                you the recognised qualification.
+                Passing the Functional Skills Maths exam is what gives you the
+                recognised qualification.
               </p>
 
-              <Link
-                href="/online-functional-skills-maths-exam"
+              <a
+                href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-full border border-emerald-200 bg-white px-6 py-3 text-sm font-semibold text-emerald-800 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-700 hover:bg-emerald-50"
               >
-                View online exam route
-              </Link>
+                Book Your Exam Now
+              </a>
             </div>
           </div>
         </div>
@@ -528,9 +538,9 @@ export default function OnlineMathsCoursePage() {
 
       <CTASection
         title="Want to prepare before your online maths exam?"
-        description="Check the latest Functional Skills Maths online course information, price and official enrolment guidance before starting your preparation."
+        description="Check the online course information, price and study options before starting your Functional Skills Maths preparation."
         link="https://www.intechcentre.com/courses/private-functional-skills-in-maths/"
-        label="View Online Maths Course"
+        label="Start Learning Online"
       />
     </>
   );

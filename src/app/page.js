@@ -335,8 +335,16 @@ export default function Home() {
 
               <p className="mt-4 leading-7 text-slate-600">
                 Choose this route if you already feel confident with Functional
-                Skills Maths topics and want to take the official online exam.
-                Passing the exam is what gives you the qualification.
+                Skills Maths topics and want to{" "}
+                <a
+                  href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-emerald-800 underline decoration-emerald-300 underline-offset-4 transition hover:text-emerald-900"
+                >
+                  book your online maths exam
+                </a>
+                . Passing the exam is what gives you the qualification.
               </p>
 
               <Link
@@ -380,30 +388,29 @@ export default function Home() {
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
-                  Official booking route
+                  Online exam booking
                 </p>
 
                 <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">
-                  Ready to check the official online maths exam booking route?
+                  Ready to book your online Functional Skills Maths exam?
                 </h2>
 
                 <p className="mt-4 leading-7 text-slate-600">
-                  This website explains the Functional Skills Maths exam route,
-                  Level 1, Level 2 and preparation options. For current exam
-                  booking information, prices and availability, use the official
-                  online Functional Skills Maths exam booking page.
+                  Choose your online Functional Skills Maths exam route, compare
+                  Level 1, Level 2 and preparation options, then continue to the
+                  exam booking page when you are ready to reserve your place.
                 </p>
               </div>
 
               <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-emerald-100">
                 <h3 className="text-xl font-bold text-slate-950">
-                  Check current exam availability
+                  Book your online maths exam
                 </h3>
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                  Review the latest online Functional Skills Maths exam
-                  guidance, including booking details, candidate information,
-                  requirements and available exam route.
+                  Use the booking page to check available online exam options,
+                  review the exam information and continue with your Functional
+                  Skills Maths exam booking.
                 </p>
 
                 <a
@@ -412,7 +419,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
                 >
-                  View official exam booking page
+                  Book Your Online Exam Now
                 </a>
               </div>
             </div>

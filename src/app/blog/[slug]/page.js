@@ -28,29 +28,29 @@ export async function generateMetadata({ params }) {
     };
   }
 
-return {
-  title: post.title,
-  description: post.description,
-  alternates: {
-    canonical: `${baseUrl}/blog/${post.slug}`,
-  },
-  openGraph: {
+  return {
     title: post.title,
     description: post.description,
-    url: `${baseUrl}/blog/${post.slug}`,
-    siteName: "Online Maths Exam",
-    type: "article",
-    locale: "en_GB",
-    images: [
-      {
-        url: `${baseUrl}${post.image}`,
-        alt: post.imageAlt,
-      },
-    ],
-    publishedTime: post.publishDate || post.date,
-    modifiedTime: post.updatedAt || post.publishDate || post.date,
-  },
-};
+    alternates: {
+      canonical: `${baseUrl}/blog/${post.slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `${baseUrl}/blog/${post.slug}`,
+      siteName: "Online Maths Exam",
+      type: "article",
+      locale: "en_GB",
+      images: [
+        {
+          url: `${baseUrl}${post.image}`,
+          alt: post.imageAlt,
+        },
+      ],
+      publishedTime: post.publishDate || post.date,
+      modifiedTime: post.updatedAt || post.publishDate || post.date,
+    },
+  };
 }
 
 function formatDate(date) {
@@ -64,6 +64,8 @@ function formatDate(date) {
 function ArticleCta({ cta }) {
   if (!cta) return null;
 
+  const isExternalLink = cta.link.startsWith("http");
+
   return (
     <div className="my-10 rounded-[2rem] border border-emerald-100 bg-emerald-50/70 p-8 shadow-sm">
       <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
@@ -74,12 +76,23 @@ function ArticleCta({ cta }) {
 
       <p className="mt-4 leading-7 text-slate-600">{cta.description}</p>
 
-      <Link
-        href={cta.link}
-        className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
-      >
-        {cta.label}
-      </Link>
+      {isExternalLink ? (
+        <a
+          href={cta.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
+        >
+          {cta.label}
+        </a>
+      ) : (
+        <Link
+          href={cta.link}
+          className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
+        >
+          {cta.label}
+        </Link>
+      )}
     </div>
   );
 }
@@ -91,8 +104,8 @@ function JsonLd({ post }) {
     headline: post.title,
     description: post.description,
     datePublished: post.publishDate || post.date,
-dateModified: post.updatedAt || post.publishDate || post.date,
-image: `${baseUrl}${post.image}`,
+    dateModified: post.updatedAt || post.publishDate || post.date,
+    image: `${baseUrl}${post.image}`,
     author: {
       "@type": "Organization",
       name: "Online Maths Exam",
@@ -304,6 +317,21 @@ export default async function BlogPostPage({ params }) {
 
                       <p className="mt-4 text-lg leading-8 text-slate-600">
                         {section.content}
+
+                        {section.link && (
+                          <>
+                            {" "}
+                            <a
+                              href={section.link.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="font-semibold text-emerald-800 underline decoration-emerald-300 underline-offset-4 transition hover:text-emerald-900"
+                            >
+                              {section.link.label}
+                            </a>
+                            .
+                          </>
+                        )}
                       </p>
 
                       {index === 1 && <ArticleCta cta={post.cta} />}

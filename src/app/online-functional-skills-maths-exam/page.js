@@ -19,7 +19,7 @@ import {
 export const metadata = {
   title: "Online Functional Skills Maths Exam | Level 1 & Level 2",
   description:
-  "Learn how the online Functional Skills Maths Level 2 exam works, including GCSE equivalence, Candidate Guide, exam structure, booking route, results, preparation and online course options.",
+    "Learn how the online Functional Skills Maths Level 2 exam works, including GCSE equivalence, Candidate Guide, exam structure, booking route, results, preparation and online course options.",
 };
 
 const candidateGuideUrl =
@@ -67,15 +67,15 @@ const examFacts = [
 const processSteps = [
   {
     step: "01",
-    title: "Choose the official booking route",
+    title: "Start your exam booking",
     description:
-      "Choose the online Functional Skills Maths exam route and complete the booking process using the current official guidance.",
+      "Choose the online Functional Skills Maths exam option and complete the booking process when you are ready.",
   },
   {
     step: "02",
     title: "Wait for confirmation",
     description:
-      "After booking, your request is processed. Candidates then receive further instructions for the online exam route.",
+      "After booking, your request is processed and candidates receive further instructions for the online exam.",
   },
   {
     step: "03",
@@ -200,15 +200,15 @@ const faqs = [
     answer:
       "Current booking guidance says learners who want City & Guilds Functional Skills Maths Level 1 should book through the Level 2 route and reply to the booking email clearly stating that they want the Level 1 exam.",
   },
-{
-  question: "Do I need to read the Candidate Guide before the online exam?",
-  answer:
-    "Yes. Candidates should read the official City & Guilds Candidate Guide before booking and before exam day. It helps explain the online exam rules, system requirements, ID checks, room setup and what to expect during the remote invigilation process.",
-  link: {
-    href: candidateGuideUrl,
-    label: "View Candidate Guide",
+  {
+    question: "Do I need to read the Candidate Guide before the online exam?",
+    answer:
+      "Yes. Candidates should read the official City & Guilds Candidate Guide before booking and before exam day. It helps explain the online exam rules, system requirements, ID checks, room setup and what to expect during the remote invigilation process.",
+    link: {
+      href: candidateGuideUrl,
+      label: "View Candidate Guide",
+    },
   },
-},
   {
     question: "Can I get extra time or access arrangements?",
     answer:
@@ -233,8 +233,8 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
             The online Functional Skills Maths exam is designed for learners who
             need a recognised GCSE equivalent maths qualification for work,
             university, apprenticeships or further study. The Level 2 online
-            exam can be taken remotely, with online invigilation and clear
-            official booking guidance.
+            exam can be taken remotely with online invigilation, giving learners
+            a flexible way to complete their maths qualification.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-600">
@@ -295,9 +295,16 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
               The online Functional Skills Maths exam allows learners to sit the
               exam remotely instead of travelling to a centre. Candidates must
               make sure their computer, internet connection, ID and exam room
-              are ready before the exam. The exam is monitored online and
-              candidates should follow the Candidate Guide carefully to avoid
-              problems on exam day.
+              are ready before the exam. When you feel prepared, you can{" "}
+              <a
+                href="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-emerald-800 underline decoration-emerald-300 underline-offset-4 transition hover:text-emerald-900"
+              >
+                book your online maths exam
+              </a>{" "}
+              and follow the exam instructions before exam day.
             </p>
 
             <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
@@ -337,49 +344,52 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
-  {examDayChecklist.map((item) => (
-    <div
-      key={item.text}
-      className="flex gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-emerald-100"
-    >
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-800">
-        <item.icon className="h-4 w-4" aria-hidden="true" />
-      </span>
+                {examDayChecklist.map((item) => (
+                  <div
+                    key={item.text}
+                    className="flex gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-emerald-100"
+                  >
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-800">
+                      <item.icon className="h-4 w-4" aria-hidden="true" />
+                    </span>
 
-      <p className="text-sm leading-6 text-slate-600">{item.text}</p>
-    </div>
-  ))}
-</div>
+                    <p className="text-sm leading-6 text-slate-600">
+                      {item.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
 
-<div className="mt-8 rounded-[1.75rem] border border-emerald-200 bg-white p-6 shadow-sm md:p-7">
-  <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
-    <div>
-      <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
-        Candidate guide
-      </p>
+              <div className="mt-8 rounded-[1.75rem] border border-emerald-200 bg-white p-6 shadow-sm md:p-7">
+                <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+                      Candidate guide
+                    </p>
 
-      <h3 className="mt-2 text-xl font-bold leading-snug text-slate-950">
-        Read the official City & Guilds Candidate Guide before exam day
-      </h3>
+                    <h3 className="mt-2 text-xl font-bold leading-snug text-slate-950">
+                      Read the official City & Guilds Candidate Guide before
+                      exam day
+                    </h3>
 
-      <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">
-        The Candidate Guide explains important online exam rules, system
-        requirements, ID checks, room setup and what candidates should expect
-        before starting the Functional Skills Maths exam.
-      </p>
-    </div>
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">
+                      The Candidate Guide explains important online exam rules,
+                      system requirements, ID checks, room setup and what
+                      candidates should expect before starting the Functional
+                      Skills Maths exam.
+                    </p>
+                  </div>
 
-    <a
-      href={candidateGuideUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex w-full justify-center rounded-full bg-emerald-700 px-6 py-3 text-center text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800 sm:w-auto"
-    >
-      View Candidate Guide
-    </a>
-  </div>
-</div>
-
+                  <a
+                    href={candidateGuideUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full justify-center rounded-full bg-emerald-700 px-6 py-3 text-center text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800 sm:w-auto"
+                  >
+                    View Candidate Guide
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
@@ -434,9 +444,9 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
               </h2>
 
               <p className="mt-4 text-lg leading-8 text-slate-600">
-                Online Functional Skills Maths exam routes are available for Level
-                1 and Level 2. The right level depends on your
-                current ability and what you need the qualification for.
+                Online Functional Skills Maths exam routes are available for
+                Level 1 and Level 2. The right level depends on your current
+                ability and what you need the qualification for.
               </p>
             </div>
 
@@ -480,13 +490,13 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
               </p>
 
               <h2 className="mt-3 text-2xl font-bold text-slate-950">
-                Book the online Functional Skills Maths exam
+                Book your online Functional Skills Maths exam
               </h2>
 
               <p className="mt-4 leading-7 text-slate-600">
                 Choose this route if you already feel confident with Functional
-                Skills Maths topics and want to take the official online exam.
-                Passing the exam is what gives you the qualification.
+                Skills Maths topics and want to book the online exam. Passing
+                the exam is what gives you the recognised qualification.
               </p>
 
               <a
@@ -495,7 +505,7 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
               >
-                View official exam route
+                Book Your Exam Now
               </a>
             </div>
 
@@ -530,9 +540,9 @@ export default function OnlineFunctionalSkillsMathsExamPage() {
 
       <CTASection
         title="Ready to book your online Functional Skills Maths exam?"
-        description="Check the latest online exam price, available slots, Candidate Guide and official booking instructions before choosing your exam date."
+        description="Check the online exam information, price and available booking options before choosing your exam date."
         link="https://www.intechcentre.com/courses/online-functional-skills-maths-level-2-exam-2/"
-        label="View Official Booking Route"
+        label="Book Your Exam Now"
       />
     </>
   );
