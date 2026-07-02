@@ -419,7 +419,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="mt-6 inline-flex rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-700/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
                 >
-                  Book Your Online Exam Now
+                  Book Your Exam Now
                 </a>
               </div>
             </div>

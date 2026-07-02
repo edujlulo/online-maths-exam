@@ -136,7 +136,7 @@ export default function Footer() {
               <span>59 Colmer Road, London, SW16 5LA</span>
             </p>
 
-            <p className="flex items-center gap-3">
+            {/* <p className="flex items-center gap-3">
               <svg
                 className="h-5 w-5 flex-shrink-0 text-emerald-300"
                 fill="none"
@@ -158,7 +158,7 @@ export default function Footer() {
               >
                 07700 900123
               </a>
-            </p>
+            </p> */}
 
             <p className="flex items-center gap-3">
               <svg
